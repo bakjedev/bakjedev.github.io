@@ -252,6 +252,89 @@ footer {
     font-size: 0.9rem;
 }
 
+/* Project Detail Page */
+.project-detail {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.breadcrumb {
+    margin-bottom: 2rem;
+}
+
+.breadcrumb a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s;
+    font-size: 0.95rem;
+}
+
+.breadcrumb a:hover {
+    color: var(--accent);
+}
+
+.project-detail-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.project-detail-header h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.project-detail-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.project-detail-description h2,
+.project-detail-tech h2,
+.project-detail-links h2 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+.project-detail-description p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-primary);
+}
+
+.project-detail-tech .project-tech {
+    margin-bottom: 0;
+}
+
+.project-detail-links .project-links {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+}
+
+.project-not-found {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.project-not-found h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.project-not-found p {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-container {
@@ -282,5 +365,9 @@ footer {
 
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .project-detail-header h1 {
+        font-size: 1.8rem;
     }
 }

@@ -6,6 +6,7 @@ A modern minimalist portfolio website for an engine and tools programmer special
 
 - **Home Page**: Hero section with pinned projects showcase
 - **Projects Page**: Complete collection of all projects
+- **Individual Project Pages**: Each project has its own dedicated page with details
 - **Modern Design**: Dark grey minimalist theme with smooth animations
 - **Responsive**: Mobile-friendly design that adapts to all screen sizes
 - **Easy Management**: Simple JSON-based project management
@@ -16,6 +17,7 @@ To add a new project, edit the `projects.json` file and add a new project object
 
 ```json
 {
+  "id": "project-slug",
   "name": "Project Name",
   "description": "Project description...",
   "technologies": ["C++", "Technology1", "Technology2"],
@@ -25,14 +27,23 @@ To add a new project, edit the `projects.json` file and add a new project object
 }
 ```
 
-- Set `"pinned": true` to display the project on the home page
-- The `demo` field is optional and can be left empty with `""`
-- Projects are automatically displayed on both home (pinned only) and projects (all) pages
+- `id`: A unique URL-friendly identifier (e.g., "my-cool-project")
+- `name`: Display name of the project
+- `description`: Brief description of the project
+- `technologies`: Array of technologies used
+- `pinned`: Set to `true` to display the project on the home page
+- `github`: GitHub repository URL (optional, use `""` if not available)
+- `demo`: Live demo URL (optional, use `""` if not available)
+
+The project will automatically:
+- Appear on the projects page (all projects)
+- Appear on the home page (if pinned)
+- Get its own detail page at `project-detail.html?id=<project-id>`
 
 ## Customization
 
 ### Contact Information
-Update the contact buttons in `index.html` and `projects.html`:
+Update the contact buttons in `index.html`, `projects.html`, and `project-detail.html`:
 - Email: Update the `mailto:` link
 - GitHub: Update the GitHub profile URL
 - LinkedIn: Update the LinkedIn profile URL
