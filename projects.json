@@ -1,58 +1,13 @@
 {
   "projects": [
     {
-      "id": "custom-game-engine",
-      "name": "Custom Game Engine",
-      "description": "A high-performance game engine written in modern C++17. Features include custom memory allocator, entity-component system, and multi-threaded rendering pipeline.",
-      "technologies": ["C++17", "OpenGL", "Vulkan", "CMake"],
+      "id": "test",
+      "name": "Test Project",
+      "description": "An informative description.",
+      "technologies": ["C++", "Awesome"],
       "pinned": true,
-      "github": "https://github.com/bakjedev/engine",
+      "github": "https://github.com/bakjedev/",
       "demo": ""
     },
-    {
-      "id": "asset-pipeline-tool",
-      "name": "Asset Pipeline Tool",
-      "description": "Cross-platform asset processing tool for game development. Converts 3D models, textures, and audio files into optimized engine-ready formats with automatic LOD generation.",
-      "technologies": ["C++", "Qt", "FBX SDK", "OpenImageIO"],
-      "pinned": true,
-      "github": "https://github.com/bakjedev/asset-pipeline",
-      "demo": ""
-    },
-    {
-      "id": "shader-compiler",
-      "name": "Shader Compiler",
-      "description": "Custom shader compilation and optimization tool. Supports GLSL, HLSL, and automatic conversion between shader languages with reflection data generation.",
-      "technologies": ["C++", "SPIRV", "GLSL", "HLSL"],
-      "pinned": true,
-      "github": "https://github.com/bakjedev/shader-compiler",
-      "demo": ""
-    },
-    {
-      "id": "profiling-framework",
-      "name": "Profiling Framework",
-      "description": "Lightweight profiling framework for real-time performance analysis in games and simulations. Features CPU/GPU profiling, memory tracking, and visualization tools.",
-      "technologies": ["C++", "ImGui", "D3D12", "OpenGL"],
-      "pinned": false,
-      "github": "https://github.com/bakjedev/profiler",
-      "demo": ""
-    },
-    {
-      "id": "physics-engine",
-      "name": "Physics Engine",
-      "description": "Rigid body physics simulation engine with broad-phase collision detection, constraint solver, and continuous collision detection for fast-moving objects.",
-      "technologies": ["C++", "SIMD", "SSE", "AVX"],
-      "pinned": false,
-      "github": "https://github.com/bakjedev/physics",
-      "demo": ""
-    },
-    {
-      "id": "build-system",
-      "name": "Build System",
-      "description": "Custom build orchestration tool for large-scale C++ projects. Implements distributed compilation, incremental builds, and dependency tracking.",
-      "technologies": ["C++", "Python", "CMake", "Ninja"],
-      "pinned": false,
-      "github": "https://github.com/bakjedev/build-system",
-      "demo": ""
-    }
   ]
 }
