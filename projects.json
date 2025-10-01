@@ -23,9 +23,9 @@
       "name": "Test Project 3",
       "description": "An informative description.",
       "technologies": ["C++", "Awesome", "3"],
-      "pinned": true,
+      "pinned": false,
       "github": "https://github.com/bakjedev/",
       "demo": ""
-    },
+    }
   ]
 }
