@@ -4,10 +4,28 @@
       "id": "test",
       "name": "Test Project",
       "description": "An informative description.",
-      "technologies": ["C++", "Awesome"],
+      "technologies": ["C++", "Awesome", "1"],
       "pinned": true,
       "github": "https://github.com/bakjedev/",
       "demo": ""
-    }
+    },
+    {
+      "id": "test2",
+      "name": "Test Project 2",
+      "description": "An informative description.",
+      "technologies": ["C++", "Awesome", "2"],
+      "pinned": true,
+      "github": "https://github.com/bakjedev/",
+      "demo": ""
+    },
+    {
+      "id": "test3",
+      "name": "Test Project 3",
+      "description": "An informative description.",
+      "technologies": ["C++", "Awesome", "3"],
+      "pinned": true,
+      "github": "https://github.com/bakjedev/",
+      "demo": ""
+    },
   ]
 }
