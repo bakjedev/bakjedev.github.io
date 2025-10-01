@@ -74,6 +74,10 @@ function parseMarkdown(markdown) {
         if (block.match(/^<(h[1-6]|ul|ol|blockquote|pre|table|hr)/)) {
             return block;
         }
+        // Don't wrap code block placeholders
+        if (block.trim().match(/^___CODE_BLOCK_\d+___$/)) {
+            return block.trim();
+        }
         // Don't wrap empty blocks
         if (block.trim() === '') {
             return '';
