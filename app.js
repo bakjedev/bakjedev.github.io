@@ -261,6 +261,11 @@ async function loadProjectDetail(projects) {
                     </div>
                 </div>
             `;
+            
+            // Highlight code blocks with Prism
+            if (typeof Prism !== 'undefined') {
+                Prism.highlightAll();
+            }
             return;
         }
     } catch (error) {
