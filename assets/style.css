@@ -17,14 +17,21 @@ nav {
 }
 
 a {
-  color: #444;
-  text-decoration: none;
+  color: blue;
+}
+
+a:visited {
+  color: purple;
 }
 
 nav a {
   text-decoration: none;
   color: #333;
   padding: 0 10px;
+}
+
+nav a:visited {
+  color: #333
 }
 
 .stuff-right {
