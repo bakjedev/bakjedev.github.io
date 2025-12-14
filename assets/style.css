@@ -5,11 +5,11 @@ body {
   font-size: 18px;
   color: #444;
   background-color: #EEEEEE;
-  padding: 0 10px
+  padding: 0 10px;
 }
 
 h1,h2,h3 {
-  line-height: 1.2
+  line-height: 1.2;
 }
 
 nav a {
