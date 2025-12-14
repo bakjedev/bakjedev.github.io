@@ -24,4 +24,5 @@ a {
 nav a {
   text-decoration: none;
   color: #333;
+  padding: 0 10px;
 }
