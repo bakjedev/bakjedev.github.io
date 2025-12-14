@@ -1,2 +1,1 @@
-# bakjedev.github.io
-my website
+this is the repo for my website
