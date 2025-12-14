@@ -15,3 +15,13 @@ I'm a third-year **game programmer** at **Breda University of Applied Sciences**
 - **Other Languages:** Python, Rust
 - **Engines:** Unreal, Godot
 - **Interests:** Gaming (Counter-Strike, Minecraft, Valheim, Factorio), real time rendering, optimization
+
+### Pinned Posts
+
+<ul>
+  {% for post in site.pages %}
+    {% if post.pinned %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endif %}
+  {% endfor %}
+</ul>
