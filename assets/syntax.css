@@ -4,7 +4,9 @@
   padding: 16px;
   border-radius: 6px;
   overflow-x: auto;
+  font-size: 18px
 }
+
 .highlight pre {
   margin: 0;
   background: none;
