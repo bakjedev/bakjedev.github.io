@@ -1,0 +1,16 @@
+title: bakje
+description: personal website
+baseurl: ""
+url: "https://bakjedev.github.io"
+
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"

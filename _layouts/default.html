@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ site.title }}</title>
+</head>
+<body>
+  <nav>
+    <a href="/">Home</a>
+    {% for page in site.pages %}
+      <a href="{{ page.url }}">{{ page.title }}</a>
+    {% endfor %}
+  </nav>
+  
+  {{ content }}
+</body>
+</html>
