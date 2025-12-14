@@ -24,7 +24,7 @@
 .highlight .mi  { color: #032f62; } /* integers */
 .highlight .mf  { color: #032f62; } /* floats */
 .highlight .o   { color: #96a6c8; } /* operators: +, -, =, * */
-.highlight .p   { color: #96a6c8; } /* punctuation: ( ) { } , ; */
+.highlight .p   { color: #e4e4ef; } /* punctuation: ( ) { } , ; */
 .highlight .c   { color: #cd8c3d; font-style: italic; } /* comments */
 .highlight .c1  { color: #cd8c3d; font-style: italic; } /* single-line comments */
 .highlight .cm  { color: #cd8c3d; font-style: italic; } /* multi-line comments */

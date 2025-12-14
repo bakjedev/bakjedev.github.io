@@ -9,7 +9,7 @@ testing text
 ### Test
 
 ```cpp
-void foo(int x) {
-  printf("uhm %d", x);
+void bar::foo(int x) {
+  printf("uhm %d", x); // hello world!
 }
 ```
