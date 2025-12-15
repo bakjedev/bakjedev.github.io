@@ -16,6 +16,7 @@
 .highlight .k   { color: #ffdd33; } /* keywords: if, while, return, class */
 .highlight .kt  { color: #ffdd33; } /* types: void, int, string */
 .highlight .kd  { color: #ffdd33; } /* declarations: var, let, const */
+.highlight .kc  { color: #ffdd33; } /* constants */
 .highlight .nf  { color: #96a6c8; } /* function names */
 .highlight .nc  { color: #95a99f; } /* class names */
 .highlight .n   { color: #e4e4ef; } /* variables */
