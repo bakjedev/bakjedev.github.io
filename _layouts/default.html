@@ -18,7 +18,15 @@
     <a href="/">Home</a>
     <a href="/posts">Posts</a>
   </nav>
-  
+
+  {% if page.title %}
+    # {{ page.title }}
+  {% endif %}
+
+  {% if page.date %}
+    {{ page.date }}
+  {% endif %}
+    
   {{ content }}
 </body>
 </html>
