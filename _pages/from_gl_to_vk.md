@@ -1,11 +1,8 @@
 ---
 title: From GL to VK
+datePosted: 24 Jan 2025
 pinned: true
 ---
-
-# From GL to VK
-
-Jan 24, 2025
 
 ![render](/assets/images/from_gl_to_vk/render.webp)
 
