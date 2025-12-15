@@ -14,6 +14,7 @@ I'm a third-year **game programmer** at **Breda University of Applied Sciences**
 - **Primary Language:** C++
 - **Other Languages:** Python, Rust
 - **Engines:** Unreal, Godot
+- **Natural Languages:** Dutch, English
 - **Interests:** Gaming (Counter-Strike, Minecraft, Valheim, Factorio), real time rendering, optimization
 
 ### Pinned Posts
