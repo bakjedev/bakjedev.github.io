@@ -20,11 +20,11 @@
   </nav>
 
   {% if page.title %}
-    # {{ page.title }}
+    <h1>{{ page.title }}</h1>
   {% endif %}
 
-  {% if page.date %}
-    {{ page.date }}
+  {% if page.datePosted %}
+    {{ page.datePosted }}
   {% endif %}
     
   {{ content }}
