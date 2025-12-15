@@ -17,7 +17,7 @@ I'm a third-year **game programmer** at **Breda University of Applied Sciences**
 - **Natural Languages:** Dutch, English
 - **Interests:** Gaming (Counter-Strike, Minecraft, Valheim, Factorio), real time rendering, optimization
 
-### Pinned Posts
+# Pinned Posts
 
 <ul>
   {% for post in site.pages %}
