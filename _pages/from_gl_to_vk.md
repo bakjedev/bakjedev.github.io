@@ -26,6 +26,7 @@ Something I didn’t mention earlier is that with the logical device you need to
 
 Now for the actual rendering. After the command buffer begins recording you can start sending commands. First we will need to begin either the render pass or rendering depending on if you’re using dynamic rendering. I am using dynamic rendering so for me its begin rendering. This where you specify what image you will render to, what operation it should do when loading and storing the image, the clear value and the attachments. Now you can set the viewport and the scissor. A viewport defines the area of the image that will be rendered to. The scissor is the area of the image that is actually stored. This will basically always be from (0, 0) to (screenWidth, screenHeight). Now you can bind the graphics pipeline, vertex buffer and index buffer and send a draw command to render. A rendering loop would look something like this:
 
+{% raw %}
 ```cpp
 // wait for fences
 // reset fences
@@ -84,6 +85,7 @@ if (vkEndCommandBuffer(commandBuffer) != VK_SUCCESS)
 // wait on render finished
 // present
 ```
+{% endraw %}
 
 ![diagram2](/assets/images/from_gl_to_vk/diagram2.webp)
 
@@ -93,6 +95,7 @@ Sending over information to the shader like the transforms of the camera and the
 
 Where in OpenGL you can simply just update a uniform at any point, in Vulkan you first need to setup a descriptor set. One of the problems I ran into was that descriptor sets can not be updated anymore after they’re bound during a frame. So when I was looping over my meshes to render them I tried to update the descriptor sets for each object. This resulted in it only working for the first object and a crap ton of validation layer errors telling me that the bound descriptor set has either been updated or destroyed. To solve this I uploaded all the object data to the GPU before the rendering through a descriptor set with a storage buffer. And then using the push constant to give the shader the objects index.
 
+{% raw %}
 ```cpp
 // simplified code
 vkCmdBindPipeline();
@@ -114,6 +117,7 @@ for ( const auto& mesh : meshes )
   vkCmdDrawIndexed();
 }
 ```
+{% endraw %}
 
 I mentioned validation layers just now. You might be wondering what those are. In OpenGL, error checking is done by the driver, which can lead to overhead and issues only being detected at runtime. Vulkan makes developers manage error checking themselves. Vulkan gives you validation layers. They are layers that go between Vulkan function calls to check for errors. This means by default Vulkan has no error checking which reduces driver overhead.
 
@@ -121,6 +125,7 @@ The coordinate system is also different in Vulkan from OpenGL. OpenGL is left ha
 
 In OpenGL textures are mostly abstracted away. You call glTexImage2D and most of the memory allocations, format conversions, and bindings are done for you. In Vulkan you need to handle all of this yourself. First you need create an image, where you specify the format, size, and usage. Now you also need to allocate memory for this image. You can do this normally or using a library like [Vulkan Memory Allocator](https://gpuopen.com/vulkan-memory-allocator/) (VMA). VMA abstracts complex parts of Vulkan’s memory management.
 
+{% raw %}
 ```cpp
 // Without VMA
 VkBufferCreateInfo bufferCreateInfo = {};
@@ -153,6 +158,7 @@ allocCreateInfo.usage = memoryUsage; // e.g. VMA_MEMORY_USAGE_GPU_ONLY
 
 vmaCreateBuffer(allocator, &bufferCreateInfo, &allocCreateInfo, buffer, allocation, nullptr);
 ```
+{% endraw %}
 
 In OpenGL the textures themselves contain sampler parameters like filtering and wrapping modes. In Vulkan samplers are completely separate objects. Vulkan also has image views. OpenGL doesn’t separate the texture object and its view. In Vulkan each image needs a view for it to be used. The image view for example specifies how many mip levels or layers the image has.
 
