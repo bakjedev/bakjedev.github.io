@@ -16,16 +16,16 @@
 .highlight .k   { color: #ffdd33; } /* keywords: if, while, return, class */
 .highlight .kt  { color: #ffdd33; } /* types: void, int, string */
 .highlight .kd  { color: #ffdd33; } /* declarations: var, let, const */
-.highlight .kc  { color: #ffdd33; } /* constants */
+.highlight .nb  { color: #ffdd33; } /* constants */
 .highlight .nf  { color: #96a6c8; } /* function names */
 .highlight .nc  { color: #95a99f; } /* class names */
 .highlight .n   { color: #e4e4ef; } /* variables */
 .highlight .s   { color: #73d936; } /* strings */
 .highlight .s1  { color: #73d936; } /* single-quote strings */
 .highlight .s2  { color: #73d936; } /* double-quote strings */
-.highlight .m   { color: #032f62; } /* numbers */
-.highlight .mi  { color: #032f62; } /* integers */
-.highlight .mf  { color: #032f62; } /* floats */
+.highlight .m   { color: #96a6c8; } /* numbers */
+.highlight .mi  { color: #96a6c8; } /* integers */
+.highlight .mf  { color: #96a6c8; } /* floats */
 .highlight .o   { color: #96a6c8; } /* operators: +, -, =, * */
 .highlight .p   { color: #e4e4ef; } /* punctuation: ( ) { } , ; */
 .highlight .c   { color: #cd8c3d; font-style: italic; } /* comments */
