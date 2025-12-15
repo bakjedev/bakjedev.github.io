@@ -1,6 +1,5 @@
 ---
 title: Example Page
-pinned: true
 ---
 
 # Testing title
