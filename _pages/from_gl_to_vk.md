@@ -5,6 +5,8 @@ pinned: true
 
 # From GL to VK
 
+![render](/assets/images/from_gl_to_vk/render.webp)
+
 Ah, graphics programming. For many, OpenGL has been the first step into this world. An easy to use, widely supported graphics API with decades of resources. However, modern demands in rendering have pushed OpenGL to its limits and Vulkan became a successor that offered more control. Maybe you’re here after just learning the basics of graphics programming with OpenGL and now want to give Vulkan a try or maybe you’re brave enough to step into graphics programming with Vulkan straight away. In this post, I’ll be talking about the basics of vulkan, the differences between it and OpenGL and some of my own experiences with Vulkan.
 
 I started off with an engine that already had the basic structure for the renderer in place. The goal was to replace the OpenGL implementation with a Vulkan implementation. The OpenGL renderer I’m starting with has some basic features like: a GLFW window, instancing, PBR materials, lights (directional and point), shadow maps (only for directional lights), MSAA, and effects like fog and a vignette.
