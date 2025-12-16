@@ -1,11 +1,17 @@
 title: bakje
 
 collections:
-  pages:
+  posts:
+    output: true
+  projects:
     output: true
 
 defaults:
   - scope:
-      type: "pages"
+      type: "posts"
+    values:
+      layout: "default"
+  - scope:
+      type: "projects"
     values:
       layout: "default"

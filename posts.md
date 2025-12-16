@@ -5,6 +5,6 @@ title: Posts
 
 # Posts
 
-{% for page in site.pages %}
-- [{{ page.title }}]({{ page.url }})
+{% for post in site.posts %}
+- [{{ post.title }}]({{ post.url }})
 {% endfor %}
