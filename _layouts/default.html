@@ -6,15 +6,6 @@
   <title>{{ site.title }}</title>
   <link rel="stylesheet" href="/assets/style.css">
   <link rel="stylesheet" href="/assets/syntax.css">
-
-  <script>
-    document.querySelectorAll('a').forEach(link => {
-      if (link.hostname !== window.location.hostname) {
-        link.setAttribute('target', '_blank');
-        link.setAttribute('rel', 'noopener');
-      }
-    });
-  </script>
 </head>
 <body>
   <header class="top-bar">
@@ -43,5 +34,14 @@
   {% endif %}
     
   {{ content }}
+
+<script>
+  document.querySelectorAll('a').forEach(link => {
+    if (link.hostname !== window.location.hostname) {
+      link.setAttribute('target', '_blank');
+      link.setAttribute('rel', 'noopener');
+    }
+  });
+</script>
 </body>
 </html>
