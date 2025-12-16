@@ -79,6 +79,10 @@ nav a:visited {
 }
 
 @media (max-width: 600px) {
+  body {
+    margin: auto;
+  }
+
   .top-bar {
     position: static;
     flex-direction: column;
