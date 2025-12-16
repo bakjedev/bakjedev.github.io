@@ -77,3 +77,9 @@ nav a:visited {
   text-decoration: none;
   color: #444;
 }
+
+@media (max-width: 600px) {
+  .top-bar {
+    position: static;
+  }
+}
