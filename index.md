@@ -1,9 +1,7 @@
 ---
 layout: default
-title: Home
+title: About
 ---
-
-# About
 
 ## Hi I'm Quinten Bubberman!
 
@@ -17,7 +15,7 @@ I'm a third-year **game programmer** at **Breda University of Applied Sciences**
 - **Natural Languages:** Dutch, English
 - **Interests:** Gaming (Counter-Strike, Minecraft, Valheim, Factorio), real time rendering, optimization
 
-# Pinned Projects
+## Pinned Projects
 
 <ul>
   {% for project in site.projects %}
@@ -27,7 +25,7 @@ I'm a third-year **game programmer** at **Breda University of Applied Sciences**
   {% endfor %}
 </ul>
 
-# Pinned Posts
+## Pinned Posts
 
 <ul>
   {% for post in site.pages %}
