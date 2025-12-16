@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Posts
+title: Projects
 ---
 
-# Posts
+# Projects
 
 {% for project in site.projects %}
 - [{{ project.title }}]({{ project.url }})
