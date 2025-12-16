@@ -30,7 +30,7 @@ I'm a third-year **game programmer** at **Breda University of Applied Sciences**
 # Pinned Posts
 
 <ul>
-  {% for post in site.posts %}
+  {% for post in site.pages %}
     {% if post.pinned %}
       <li><a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endif %}
