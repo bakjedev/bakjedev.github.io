@@ -27,6 +27,7 @@ h1,h2,h3 {
 
 nav {
   text-align: center;
+  flex: 1;
 }
 
 img {
@@ -57,15 +58,19 @@ nav a:visited {
 .stuff-right {
   display: flex;
   gap: 20px;
+  flex: 1;
+  justify-content: flex-end;
 }
 
 .stuff-right a {
   text-decoration: none;
   color: #444;
 }
+
 .stuff-left {
   display: flex;
   gap: 20px;
+  flex: 1;
 }
 
 .stuff-left a {
