@@ -107,6 +107,12 @@ nav a:visited {
   margin: 0;
 }
 
+.post-card h3 {
+  padding: 15px;
+  margin: 0;
+  font-size: 18px;
+}
+
 @media (max-width: 600px) {
   body {
     margin: auto;
