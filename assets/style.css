@@ -112,6 +112,10 @@ nav a:visited {
   font-size: 18px;
 }
 
+.post-card:visited {
+  color: #444;
+}
+
 @media (max-width: 600px) {
   body {
     margin: auto;
