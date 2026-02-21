@@ -3,6 +3,7 @@ title: Exporting Bézier Splines from Blender to glTF
 datePosted: Apr 2025
 image: "assets/images/beetle/spline.png"
 project: beetle
+priority: 1
 ---
 
 ![spline](../assets/images/beetle/spline.png)
@@ -97,7 +98,7 @@ struct Spline
 {
     int resolution = 12;
     bool dirty = true;
-    std::vector cachedPoints;
+    std::vector<glm::vec3> cachedPoints;
 };
 ```
 

@@ -3,6 +3,7 @@ title: Turning glTF Extras into ECS Components
 datePosted: Apr 2025
 image: "assets/images/beetle/blender_properties.png"
 project: beetle
+priority: 2
 ---
 
 ![blender properties](../assets/images/beetle/blender_properties.png)
@@ -75,14 +76,16 @@ The parsed data is stored per node index using `std::variant` to handle all the 
 ```cpp
 using GLTFExtra = std::variant<
     float, int, bool, std::string,
-    std::vector, std::vector,
-    std::vector, std::vector,
-    std::vector<std::vector>
+    std::vector<float>,
+    std::vector<int>,
+    std::vector<bool>,
+    std::vector<std::string>,
+    std::vector<std::vector<float>>
 >;
 
 struct GLTFExtras
 {
-    std::unordered_map data;
+    std::unordered_map<std::string, GLTFExtra> data;
 };
 ```
 
@@ -121,21 +124,12 @@ for (auto [entity, extras] : Engine.ECS().Registry.view().each())
 }
 ```
 
-This is essentially a data driven entity factory. Adding a new component type to the pipeline means: register a Blender property, add a branch in this loop. Nothing else.
+This is essentially a data driven entity factory. Adding a new component type to the pipeline simply means: register a Blender property, add a branch in this loop. Nothing else.
 
 ## Prefabs
 
-One property we added is `prefab`: a path to another glTF file. When the converting loop processes it, it instantiates that glTF into the scene. This lets designers swap assets (different vehicles, different track props) by changing a string in Blender instead of restructuring the scene.
+One property we added is prefab: a path to another glTF file. When the converting loop processes it, it instantiates that glTF into the scene. Blender already has file linking for referencing objects across .blend files, which we used for collaboration. Prefabs solved a different problem: swapping what gets loaded at a point in the scene by changing a single path string, without restructuring the Blender file.
 
-Blender already has file linking for referencing objects across .blend files, which we used for collaboration. Prefabs solved a different problem: swapping what gets loaded at a point in the scene without restructuring the Blender file just change a path string and re-export.
-
-## The Full Pipeline
-
-The workflow for adding any new configurable object type:
-
-1. Add a property in the Blender addon.
-2. Export (properties are exported as glTF extras automatically).
-3. Add a branch in the converting loop that reads the extras and creates the right components.
-4. Designers configure everything in Blender.
+## Conclusion
 
 This kept the iteration loop short: edit in Blender, press export, reload in engine. Everything configurable lives in one place.
