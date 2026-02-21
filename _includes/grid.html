@@ -1,10 +1,9 @@
 <div class="post-grid">
   {% if include.collection == "projects" %}
-    {% assign items = site.projects %}
+    {% assign items = site.projects | sort: "priority" %}
   {% else %}
-    {% assign items = site.pages %}
+    {% assign items = site.pages | sort: "priority" %}
   {% endif %}
-
   {% for item in items %}
     {% if include.pinned == true and item.pinned != true %}
       {% continue %}
