@@ -4,7 +4,11 @@ image: "assets/images/from_gl_to_vk/cathedral.png"
 pinned: true
 ---
 
-**Solo** | **Role:** Graphics Programmer | **Duration:** 8 weeks
+- **Solo**
+- **Role:** Graphics Programmer
+- **Duration:** 8 weeks
+{:.project-table}
+
 
 ![engine](/assets/images/from_gl_to_vk/cathedral.png)
 

@@ -4,7 +4,10 @@ image: "assets/images/gpu_driven/frustum_cull.png"
 pinned: true
 ---
 
-**Solo** | **Role:** Graphics Programmer | **Duration:** 8 weeks
+- **Solo**
+- **Role:** Graphics Programmer
+- **Duration:** 8 weeks
+{:.project-table}
 
 ![frustum](/assets/images/gpu_driven/frustum_cull.png)
 
