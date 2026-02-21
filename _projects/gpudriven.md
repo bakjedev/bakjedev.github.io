@@ -12,7 +12,7 @@ priority: 2
 - **Duration:** 8 weeks
 {:.project-table}
 
-Built a Vulkan renderer from scratch, starting from a basic triangle and core engine systems (ECS, mesh loading, etc.)I extended it with GPU-driven rendering: a compute shader generates DrawIndexedIndirectCommands, letting the GPU decide what to draw in a single draw call. Rendered 636K objects at 60 FPS. Implemented GPU frustum culling with plane extraction from the view-projection matrix. Cross-platform (Linux/Windows), uses Slang for shaders.
+Built a Vulkan renderer from scratch. Starting from a basic triangle and core engine systems (ECS, mesh loading, etc.) I extended it with GPU-driven rendering: a compute shader generates DrawIndexedIndirectCommands, letting the GPU decide what to draw in a single draw call. Rendered 636K objects at 60 FPS. Implemented GPU frustum culling with plane extraction from the view-projection matrix. Cross-platform (Linux/Windows), uses Slang for shaders.
 
 ### Related
 
