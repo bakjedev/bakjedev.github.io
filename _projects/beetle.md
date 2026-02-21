@@ -10,4 +10,4 @@ Together with a team I built a cross-platform game engine and racing demo, devel
 
 ### Related
 
-{% include related-posts.html project="beetle" %}
+{% include related_posts.html project="beetle" %}
