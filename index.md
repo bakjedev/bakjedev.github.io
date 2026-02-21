@@ -12,10 +12,10 @@ I'm a third-year **game programmer** at **Breda University of Applied Sciences**
 ### What I work with
 
 - **Primary Language:** C++
-- **Other Languages:** Python, Rust
+- **Other Languages:** Python, Rust, GLSL
 - **Engines:** Unreal, Godot
+- **Tools:** Git, Perforce, Rider, Visual Studio, NSight Graphics, Tracy, Linux
 - **Natural Languages:** Dutch, English
-- **Interests:** Gaming (Counter-Strike, Minecraft, Valheim, Factorio), real time rendering, optimization
 
 ## Pinned Projects
 
