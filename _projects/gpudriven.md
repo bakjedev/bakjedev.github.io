@@ -1,5 +1,6 @@
 ---
 title: "Vulkan GPU-Driven Renderer"
+image: "assets/images/gpu_driven/frustum_cull.png"
 pinned: true
 ---
 
