@@ -11,7 +11,7 @@ Together with a team I built a cross-platform game engine and racing demo, devel
 <div class="post-grid">
   {% for post in site.pages %}
     {% if post.project == "beetle" %}
-      <a href="{{ post.url }}" class="post-card">
+      <a href="../{{ post.url }}" class="post-card">
         {% if post.image %}
           <img src="{{ post.image }}" alt="Missing image">
         {% endif %}

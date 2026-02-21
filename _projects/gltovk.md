@@ -13,7 +13,7 @@ buffer transfers, reducing frame time by 33%.
 <div class="post-grid">
   {% for post in site.pages %}
     {% if post.project == "gltovk" %}
-      <a href="{{ post.url }}" class="post-card">
+      <a href="../{{ post.url }}" class="post-card">
         {% if post.image %}
           <img src="{{ post.image }}" alt="Missing image">
         {% endif %}
