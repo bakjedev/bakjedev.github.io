@@ -4,6 +4,8 @@ image: "assets/images/from_gl_to_vk/cathedral.png"
 pinned: true
 ---
 
+**Solo** - **Role: Graphics Programmer** - **Duration: 8 weeks**
+
 ![engine](/assets/images/from_gl_to_vk/cathedral.png)
 
 Migrated existing engine rendering backend from OpenGL to Vulkan, implementing PBR with

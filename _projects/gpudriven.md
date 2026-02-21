@@ -4,6 +4,8 @@ image: "assets/images/gpu_driven/frustum_cull.png"
 pinned: true
 ---
 
+**Solo** - **Role: Graphics Programmer** - **Duration: 8 weeks**
+
 ![frustum](/assets/images/gpu_driven/frustum_cull.png)
 
 Implemented Multi-Draw Indirect with compute shader generating draw commands from
