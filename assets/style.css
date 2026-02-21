@@ -116,6 +116,14 @@ nav a:visited {
   color: #444;
 }
 
+.project-table {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  list-style: none;
+  padding: 0;
+}
+
 @media (max-width: 600px) {
   body {
     margin: auto;
