@@ -1,8 +1,11 @@
 ---
 title: Exporting Bézier Splines from Blender to glTF
 datePosted: Apr 2025
+image: "assets/images/beetle/spline.png"
 project: beetle
 ---
+
+![spline](../assets/images/beetle/spline.png)
 
 Our racing game needed splines for three things: tracking race progress, guiding AI drivers, and drawing a minimap. We were already using Blender as our level editor and glTF as our scene format, so the goal was simple: create a Bézier curve in Blender, export it, and reconstruct it exactly in engine.
 
