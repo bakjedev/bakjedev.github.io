@@ -4,12 +4,12 @@ image: "assets/images/gpu_driven/frustum_cull.png"
 pinned: true
 ---
 
+![frustum](/assets/images/gpu_driven/frustum_cull.png)
+
 - **Solo**
 - **Role:** Graphics Programmer
 - **Duration:** 8 weeks
 {:.project-table}
-
-![frustum](/assets/images/gpu_driven/frustum_cull.png)
 
 Implemented Multi-Draw Indirect with compute shader generating draw commands from
 storage buffers, rendering 636K objects at 60 FPS in single draw call. Built CPU frustum
