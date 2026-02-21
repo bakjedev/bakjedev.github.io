@@ -2,6 +2,7 @@
 title: "Beetle: Custom Racing Game Engine"
 image: "assets/images/beetle/beetle_engine.png"
 pinned: true
+priority: 1
 ---
 
 ![engine](/assets/images/beetle/beetle_engine.png)
