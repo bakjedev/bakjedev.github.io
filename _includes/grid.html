@@ -6,7 +6,7 @@
   {% endif %}
 
   {% for item in items %}
-    {% if include.pinned and item.pinned == true %}
+    {% if include.pinned == true and item.pinned != true %}
       {% continue %}
     {% endif %}
     <a href="{{ item.url }}" class="post-card">
