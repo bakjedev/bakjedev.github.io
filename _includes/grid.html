@@ -1,0 +1,19 @@
+<div class="post-grid">
+  {% if include.collection == "projects" %}
+    {% assign items = site.projects %}
+  {% else %}
+    {% assign items = site.pages %}
+  {% endif %}
+
+  {% for item in items %}
+    {% if include.pinned and item.pinned == false %}
+      {% continue %}
+    {% endif %}
+    <a href="{{ item.url }}" class="post-card">
+      {% if item.image %}
+        <img src="{{ item.image }}" alt="Missing image">
+      {% endif %}
+      <h3>{{ item.title }}</h3>
+    </a>
+  {% endfor %}
+</div>

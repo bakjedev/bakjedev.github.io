@@ -19,30 +19,8 @@ I'm a third-year **game programmer** at **Breda University of Applied Sciences**
 
 ## Pinned Projects
 
-<div class="post-grid">
-  {% for project in site.projects %}
-    {% if project.pinned %}
-      <a href="{{ project.url }}" class="post-card">
-        {% if project.image %}
-          <img src="{{ project.image }}" alt="Missing image">
-        {% endif %}
-        <h3>{{ project.title }}</h3>
-      </a>
-    {% endif %}
-  {% endfor %}
-</div>
+{% include grid.html collection="projects" pinned=true %}
 
 ## Pinned Posts
 
-<div class="post-grid">
-  {% for post in site.pages %}
-    {% if post.pinned %}
-      <a href="{{ post.url }}" class="post-card">
-        {% if post.image %}
-          <img src="{{ post.image }}" alt="Missing image">
-        {% endif %}
-        <h3>{{ post.title }}</h3>
-      </a>
-    {% endif %}
-  {% endfor %}
-</div>
+{% include grid.html collection="posts" pinned=true %}
