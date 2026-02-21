@@ -4,7 +4,10 @@ image: "assets/images/beetle/beetle_engine.png"
 pinned: true
 ---
 
-**Team size: 6** - **Role: Engine & Tools Programmer** - **Duration: 8 weeks**
+| **Team size:** 6 | **Role:** Engine & Tools Programmer | **Duration:** 8 weeks |
+|:----------------:|:-----------------------------------:|:---------------------:|
+
+**Team size:** 6 | **Role:** Engine & Tools Programmer | **Duration:** 8 weeks
 
 ![engine](/assets/images/beetle/beetle_engine.png)
 
