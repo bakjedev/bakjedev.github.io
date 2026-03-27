@@ -12,7 +12,7 @@ priority: 1
 - **Duration:** 8 weeks
 {:.project-table}
 
-<div class="project-details">
+<div class="project-details" markdown="1">
 
 Together with a team I built a cross-platform game engine and racing demo in C++. I focused on engine systems and the content pipeline:
 
