@@ -27,6 +27,6 @@ Runs on PC and Steam Deck.
 
 </div>
 
-## Technical details
+## Posts
 
 {% include related_posts.html project="beetle" %}
