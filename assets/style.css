@@ -130,6 +130,10 @@ nav a:visited {
   color: inherit;
 }
 
+.more-link:visited {
+  color: inherit;
+}
+
 @media (max-width: 600px) {
   body {
     margin: auto;
