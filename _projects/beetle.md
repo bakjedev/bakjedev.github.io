@@ -16,12 +16,12 @@ priority: 0
 
 Together with a team I built a cross-platform game engine and racing demo in C++. I focused on engine systems and the content pipeline:
 
+- [Blender-to-engine content pipeline](../pages/blender_extras) including custom properties, glTF extras parsing, prefabs, and DDS texture conversion
 - Input mapping system supporting keyboard/mouse/gamepad with configurable axis remapping
 - ECS-based 3D sound system backed by FMOD
 - [Spline system using cubic Bézier interpolation](../pages/blender_spline), exported from Blender via custom glTF extensions
 - Spring arm camera system
 - UI framework built on the existing ECS
-- [Blender-to-engine content pipeline](../pages/blender_extras) including custom properties, glTF extras parsing, prefabs, and DDS texture conversion
 
 Runs on PC and Steam Deck.
 
