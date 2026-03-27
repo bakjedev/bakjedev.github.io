@@ -20,6 +20,6 @@ buffer transfers, reducing frame time by 33%.
 
 </div>
 
-### Posts
+## Posts
 
 {% include related_posts.html project="gltovk" %}
