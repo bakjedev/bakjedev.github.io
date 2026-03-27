@@ -143,7 +143,7 @@ nav a:visited {
 .back-button {
   position: absolute;
   left: -3rem;
-  top: 4rem;
+  top: 2.8rem;
 }
 
 @media (max-width: 600px) {
