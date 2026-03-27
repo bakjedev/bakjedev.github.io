@@ -139,6 +139,12 @@ nav a:visited {
   color:inherit;
 }
 
+.back-button {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+}
+
 @media (max-width: 600px) {
   body {
     margin: auto;
