@@ -18,6 +18,7 @@ I'm a third-year **game programmer** at **Breda University of Applied Sciences**
 - **Natural Languages:** Dutch, English
 
 ## Pinned Projects
+-# [More projects](/projects)
 
 {% include grid.html collection="projects" pinned=true %}
 
