@@ -124,6 +124,11 @@ nav a:visited {
   padding: 0;
 }
 
+.more-link {
+  font-size: 0.5em;
+  font-weight: normal;
+}
+
 @media (max-width: 600px) {
   body {
     margin: auto;
