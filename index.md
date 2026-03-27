@@ -1,6 +1,7 @@
 ---
 layout: default
 title: About
+noBack: true
 ---
 
 ## Hi I'm Quinten Bubberman!

@@ -32,6 +32,10 @@
   {% if page.datePosted %}
     <p>{{ page.datePosted }}</p>
   {% endif %}
+
+  {% unless page.noBack %}
+    <a href="javascript:history.back()" class="back-button">back</a>
+  {% endunless %}
     
   {{ content }}
 
