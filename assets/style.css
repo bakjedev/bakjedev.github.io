@@ -1,4 +1,5 @@
 body {
+  position: relative;
   max-width: 650px;
   margin: 40px auto;
   padding: 10px 10px 40px 10px;
@@ -141,8 +142,8 @@ nav a:visited {
 
 .back-button {
   position: absolute;
-  left: 1rem;
-  top: 1rem;
+  left: -3rem;
+  top: 0;
 }
 
 @media (max-width: 600px) {
