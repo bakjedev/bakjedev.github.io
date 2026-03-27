@@ -2,7 +2,7 @@
 title: "Vulkan Renderer Replacement"
 image: "assets/images/from_gl_to_vk/cathedral.png"
 pinned: true
-priority: 0
+priority: 1
 ---
 
 ![engine](/assets/images/from_gl_to_vk/cathedral.png)
