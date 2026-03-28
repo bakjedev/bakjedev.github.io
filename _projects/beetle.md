@@ -25,12 +25,14 @@ Together with a team I built a cross-platform game engine and racing demo in C++
 
 Runs on PC and Steam Deck.
 
-![engine](/assets/images/beetle/beetle_engine.png)
-
-![ui](/assets/images/beetle/collageui.png)
-
 </div>
 
 ## Posts
 
 {% include related_posts.html project="beetle" %}
+
+## Images
+
+![engine](/assets/images/beetle/beetle_engine.png)
+
+![ui](/assets/images/beetle/collageui.png)
