@@ -1,7 +1,7 @@
 ---
 title: From GL to VK
 datePosted: 24 Jan 2025
-image: "assets/images/from_gl_to_vk/render.webp"
+image: "assets/images/from_gl_to_vk/render_thumbnail.webp"
 project: gltovk
 pinned: true
 priority: 0
