@@ -1,11 +1,11 @@
 ---
 title: "Beetle: Custom Racing Game Engine"
-image: "assets/images/beetle/beetle_engine.png"
+image: "assets/images/beetle/cars.png"
 pinned: true
 priority: 0
 ---
 
-![engine](/assets/images/beetle/beetle_engine.png)
+![cars](/assets/images/beetle/cars.png)
 
 - **Team size:** 6
 - **Role:** Engine & Tools Programmer
@@ -24,6 +24,10 @@ Together with a team I built a cross-platform game engine and racing demo in C++
 - UI framework built on the existing ECS
 
 Runs on PC and Steam Deck.
+
+![engine](/assets/images/beetle/beetle_engine.png)
+
+![ui](/assets/images/beetle/collageui.png)
 
 </div>
 
