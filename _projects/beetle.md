@@ -1,6 +1,6 @@
 ---
 title: "Beetle: Custom Racing Game Engine"
-image: "assets/images/beetle/cars.png"
+image: "assets/images/beetle/cars_thumbnail.png"
 pinned: true
 priority: 0
 ---
