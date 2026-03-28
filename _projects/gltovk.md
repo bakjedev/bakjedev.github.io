@@ -1,6 +1,6 @@
 ---
 title: "Vulkan Renderer Replacement"
-image: "assets/images/from_gl_to_vk/sponzavulkan1.png"
+image: "assets/images/from_gl_to_vk/sponzavulkan1_thumbnail.png"
 pinned: true
 priority: 1
 ---
