@@ -21,7 +21,7 @@ Together with a team I built a cross-platform game engine and racing demo in C++
 - ECS-based 3D sound system backed by FMOD
 - [Spline system using cubic Bézier interpolation](../pages/blender_spline), exported from Blender via custom glTF extensions
 - Spring arm camera system
-- UI framework built on the existing ECS
+- [UI framework](#images) built on the existing ECS
 
 Runs on PC and Steam Deck.
 
