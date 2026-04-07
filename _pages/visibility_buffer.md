@@ -6,3 +6,7 @@ project: gpudriven
 pinned: true
 priority: 2
 ---
+
+### WIP
+
+![thumbnail](../assets/images/gpu_driven/mixed.jpg)
