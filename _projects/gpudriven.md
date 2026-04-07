@@ -2,7 +2,7 @@
 title: "Vulkan GPU-Driven Renderer"
 image: "assets/images/gpu_driven/shaded_thumbnail.jpg"
 pinned: true
-priority: 2
+priority: 0
 ---
 
 ![frustum](/assets/images/gpu_driven/shaded.jpg)
