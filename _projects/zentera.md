@@ -7,4 +7,9 @@ priority: 3
 
 ![thumbnail](../assets/images/zentera/zentera.png)
 
+- **Team size:** 16
+- **Role:** Gameplay Programmer
+- **Duration:** 8 weeks
+{:.project-table}
+
 ### WIP
