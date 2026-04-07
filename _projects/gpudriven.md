@@ -12,6 +12,8 @@ priority: 2
 - **Duration:** 16 weeks
 {:.project-table}
 
+<div class="project-details" markdown="1">
+
 Built a **Vulkan** renderer in **C++** from scratch, starting from a basic triangle and core engine systems (ECS, mesh loading, etc.). Extended it with three main rendering features:
 
 - [**GPU-driven rendering:**](../pages/gpu_driven) a compute shader generates `VkDrawIndexedIndirectCommand`s per frame, rendering 636K objects in a single draw call at 60 FPS
@@ -21,6 +23,8 @@ Built a **Vulkan** renderer in **C++** from scratch, starting from a basic trian
 **Cross platform** (Linux/Windows), shaders written in **Slang**.
 
 **Self study** project at **BUAS** (students choose a project to work on alongside main coursework).
+
+</div>
 
 [![procrastinate](https://gh-card.dev/repos/bakjedev/procrastinate.svg)](https://github.com/bakjedev/procrastinate)
 
