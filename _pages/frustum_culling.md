@@ -1,5 +1,5 @@
 ---
-title: "GPU-Driven Rendering: Frustum Culling"
+title: "Frustum Culling (gpu-driven)"
 datePosted: Apr 2026
 image: "assets/images/gpu_driven/frustum_cull_thumbnail.png"
 project: gpudriven
