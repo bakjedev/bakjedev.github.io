@@ -14,7 +14,7 @@ priority: 2
 
 <div class="project-details" markdown="1">
 
-Migrated existing engine rendering backend [from **OpenGL** to **Vulkan**](../pages/from_gl_to_vk), porting **PBR** with
+Migrated existing engine rendering backend [from OpenGL to **Vulkan**](../pages/from_gl_to_vk), porting **PBR** with
 IBL, **shadow mapping** for directional lights, **MSAA**, and a **postprocessing** pipeline. Profiled with **NSight Graphics** and optimized vertex shader I/O and
 buffer transfers, reducing frame time by **33%**.
 
