@@ -1,6 +1,6 @@
 <div class="post-grid">
   {% assign items = site.pages | sort: "priority" %}
-  {% for post in site.pages %}
+  {% for post in items %}
     {% if post.project == include.project %}
       <a href="{{ post.url }}" class="post-card">
         {% if post.image %}
