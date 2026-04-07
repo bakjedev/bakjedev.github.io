@@ -12,4 +12,6 @@ priority: 4
 - **Duration:** 8 weeks
 {:.project-table}
 
-### WIP
+For **block C** of my **first year** at **BUAS** I created a **3D CPU raytracing** engine in **C++**. I started with a template that was provided which...
+
+##### ...WIP...
