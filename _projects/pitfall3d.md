@@ -12,4 +12,9 @@ priority: 5
 - **Duration:** 8 weeks
 {:.project-table}
 
-### WIP
+For **block B** of my **first year** at **BUAS** I created a **3D** platformer game inspired the classic game **Pitfall** in **C++**. Built from scratch with:
+
+- **OpenGLES Rendering**: 3D graphics with textured meshes and basic lighting.
+- **Bullet physics integration**: 3D collision and physics simulation.
+
+##### ...WIP...
