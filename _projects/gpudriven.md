@@ -1,11 +1,11 @@
 ---
 title: "Vulkan GPU-Driven Renderer"
-image: "assets/images/gpu_driven/mixed_thumbnail.jpg"
+image: "assets/images/gpu_driven/shaded_thumbnail.jpg"
 pinned: true
 priority: 2
 ---
 
-![frustum](/assets/images/gpu_driven/mixed.jpg)
+![frustum](/assets/images/gpu_driven/shaded.jpg)
 
 - **Solo**
 - **Role:** Graphics Programmer
