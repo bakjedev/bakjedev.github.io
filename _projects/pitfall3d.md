@@ -8,7 +8,7 @@ priority: 5
 ![thumbnail](../assets/images/pitfall3d/pitfall3d.gif)
 
 - **Solo**
-- **Role:** Engine & Tools Programmer
+- **Role:** Generalist
 - **Duration:** 8 weeks
 {:.project-table}
 
