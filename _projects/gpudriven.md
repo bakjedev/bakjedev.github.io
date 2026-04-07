@@ -14,9 +14,9 @@ priority: 2
 
 Built a **Vulkan** renderer in **C++** from scratch, starting from a basic triangle and core engine systems (ECS, mesh loading, etc.). Extended it with three main rendering features:
 
-- **GPU-driven rendering:** a compute shader generates `VkDrawIndexedIndirectCommand`s per frame, rendering 636K objects in a single draw call at 60 FPS
-- **Frustum culling:** plane extraction from the view-projection matrix on the CPU and then a compute shader culling objects in parallel before writing to the indirect buffer
-- **Visibility buffer:** a pre-pass rasterizes triangle + draw IDs into a single uint32 per pixel (4 bytes/pixel), with a compute shader reconstructing attributes via manual barycentric interpolation with perspective correction
+- [**GPU-driven rendering:**](../pages/gpu_driven) a compute shader generates `VkDrawIndexedIndirectCommand`s per frame, rendering 636K objects in a single draw call at 60 FPS
+- [**Frustum culling:**](../pages/frustum_culling) plane extraction from the view-projection matrix on the CPU and then a compute shader culling objects in parallel before writing to the indirect buffer
+- [**Visibility buffer:**](../pages/visibility_buffer) a pre-pass rasterizes triangle + draw IDs into a single uint32 per pixel (4 bytes/pixel), with a compute shader reconstructing attributes via manual barycentric interpolation with perspective correction
 
 **Cross platform** (Linux/Windows), shaders written in **Slang**.
 
