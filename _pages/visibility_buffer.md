@@ -1,5 +1,5 @@
 ---
-title: "Visibility buffer (gpu-driven)"
+title: "G-Buffer Too Fat"
 datePosted: Apr 2026
 image: "assets/images/gpu_driven/mixed_thumbnail.jpg"
 project: gpudriven
