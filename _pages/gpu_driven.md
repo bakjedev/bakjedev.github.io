@@ -103,3 +103,9 @@ VertexOutput main(VertexInput input, uint instanceID : SV_InstanceID, uint baseI
 {% endraw %}
 
 It reads it back and gets the correct transform from the storage buffer. Every object gets its own data with no CPU involvement.
+
+### Conclusion
+
+With the indirect buffer filled by the compute shader and a single `drawIndexedIndirectCount` call, the renderer handles 636,000 objects at 60 FPS with one draw call on the graphics queue.
+
+Right now the compute shader writes every object regardless of visibility. Since the draw count buffer is already set up for it, the compute shader just needs to test each object against the frustum and skip invisible ones. I cover exactly this in [Frustum Culling from a Programmer's Perspective](../pages/frustum_culling)
