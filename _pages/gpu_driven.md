@@ -58,7 +58,11 @@ struct RenderObject
   int32_t padding[3];
 };
 ```
+{% endraw %}
 
+Then the compute shader looks like this:
+
+{% raw %}
 ```cpp
 void main(uint3 dispatchThreadID : SV_DispatchThreadID)
 {
