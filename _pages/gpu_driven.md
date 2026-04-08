@@ -43,3 +43,58 @@ cmd.drawIndexedIndirectCount(frame->IndirectBuffer()->get(), 0, frame->DrawCount
 {% endraw %}
 
 It’s important to note here that I’m using `drawIndexedIndirectCount` instead of `drawIndexedIndirect`. Whereas `drawIndexedIndirect` takes a draw count from the CPU, `drawIndexedIndirectCount` reads it from a buffer on the GPU alongside a maximum draw count. I’ll explain why this is necessary later.
+
+### Filling the indirect buffer
+A compute shader runs before the draw call, once per object in parallel. It reads from a buffer of render objects which each store a mesh ID and a transform. It then looks up that mesh's index and vertex offsets and writes a complete draw command into the indirect buffer.
+
+{% raw %}
+```cpp
+void main(uint3 dispatchThreadID : SV_DispatchThreadID)
+{
+  uint index = dispatchThreadID.x;
+
+  if (index >= pushConst.renderObjectCount)
+    return;
+
+  RenderObject obj = renderObjects[index];
+  MeshInfo info = meshInfos[obj.meshID];
+
+  outputCommands[index].indexCount = info.indexCount;
+  outputCommands[index].instanceCount = 1;
+  outputCommands[index].firstIndex = info.firstIndex;
+  outputCommands[index].vertexOffset = info.vertexOffset;
+  outputCommands[index].firstInstance = index;
+}
+```
+{% endraw %}
+
+Notice `firstInstance = index`. That's not a mistake. I'll explain why in the next section.
+
+### Per-object data
+
+There's a problem. MDI combines everything into one draw call, but each object still needs its own transform. Push constants aren't an option. They're per draw call, not per object. So how does the vertex shader know which transform to use?
+
+You would think that `firstInstance` is for instancing the same mesh multiple times. That's not wrong, but it misses its real utility. `firstInstance` is just a number the vertex shader receives as `SV_StartInstanceLocation`. It doesn't have to mean anything about instancing, it's just a number.
+
+In the vertex shader, `SV_StartInstanceLocation` receives whatever was written to `firstInstance`. Combined with `SV_InstanceID` you get a unique index per object:
+
+{% raw %}
+```cpp
+VertexOutput main(VertexInput input, uint instanceID : SV_InstanceID, uint baseInstance : SV_StartInstanceLocation, uint drawID : SV_DrawIndex)
+{
+  VertexOutput output;
+
+  uint index = baseInstance + instanceID;
+  RenderObject renderObject = renderObjects[index];
+
+  float4x4 model = renderObject.model;
+  float4 worldPos = mul(model, float4(input.position, 1.0));   
+  float4 viewPos = mul(pushConst.view, worldPos);    
+
+  output.position = mul(pushConst.proj, viewPos);
+  return output;
+}
+```
+{% endraw %}
+
+It reads it back and gets the correct transform from the storage buffer. Every object gets its own data with no CPU involvement.
