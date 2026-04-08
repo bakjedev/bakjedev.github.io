@@ -14,6 +14,7 @@ priority: 4
 
 For **block C** of my **first year** at **BUAS** I created a **3D CPU raytracing** engine in **C++**. I started with a template that was provided which already featured basic voxel ray tracing. I then spent 6 weeks adding:
 
+- Spheres
 - Spot lights
 - Point lights
 - Materials: diffuse, glass, metallic
