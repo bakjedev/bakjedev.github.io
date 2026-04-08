@@ -47,7 +47,18 @@ It’s important to note here that I’m using `drawIndexedIndirectCount` instea
 ### Filling the indirect buffer
 A compute shader runs before the draw call, once per object in parallel. It reads from a buffer of render objects which each store a mesh ID and a transform. It then looks up that mesh's index and vertex offsets and writes a complete draw command into the indirect buffer.
 
+Each render object in the buffer looks like this:
+
 {% raw %}
+```cpp
+struct RenderObject
+{
+  glm::mat4 model;
+  uint32_t mesh_id;
+  int32_t padding[3];
+};
+```
+
 ```cpp
 void main(uint3 dispatchThreadID : SV_DispatchThreadID)
 {
@@ -102,10 +113,10 @@ VertexOutput main(VertexInput input, uint instanceID : SV_InstanceID, uint baseI
 ```
 {% endraw %}
 
-It reads it back and gets the correct transform from the storage buffer. Every object gets its own data with no CPU involvement.
+It reads it back and gets the correct transform from the storage buffer. Every object gets its own data with no CPU involvement. Note that `firstInstance` is set to `index`, not `countedIndex`. When culling is added, those two numbers will start to differ: a command might be written at position 7 in the buffer but belong to render object 42. Using `index` makes sure that it uses the original object ID so the vertex shader always finds the right transform no matter where the command ended up.
 
 ### Conclusion
 
-With the indirect buffer filled by the compute shader and a single `drawIndexedIndirectCount` call, the renderer handles 636,000 objects at 60 FPS with one draw call on the graphics queue.
+With the indirect buffer filled by the compute shader and a single `drawIndexedIndirectCount` call, my renderer handled 636,000 objects at 60 FPS with one draw call on the graphics queue.
 
 Right now the compute shader writes every object regardless of visibility. Since the draw count buffer is already set up for it, the compute shader just needs to test each object against the frustum and skip invisible ones. I cover exactly this in [Frustum Culling from a Programmer's Perspective](../pages/frustum_culling)
