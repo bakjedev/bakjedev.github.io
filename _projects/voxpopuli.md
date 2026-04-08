@@ -29,3 +29,7 @@ For the last **2 weeks** I had to use this engine to create a small **puzzle gam
 </div>
 
 ##### ...WIP...
+
+## Images
+
+![glass ball](/assets/images/voxpopuli/ruhtracer.png)

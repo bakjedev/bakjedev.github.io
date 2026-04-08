@@ -25,3 +25,6 @@ For **block A** of my **second year** at **BUAS** I built engine systems in **C+
 
 </div>
 
+## Images
+
+![particles](/assets/images/bee/bee_particles.gif)
