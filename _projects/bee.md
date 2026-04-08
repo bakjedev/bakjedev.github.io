@@ -14,7 +14,14 @@ priority: 5
 
 <div class="project-details" markdown="1">
 
-For **block A** of my **second year** at **BUAS** I built engine systems in **C++** from scratch: **ECS-based particle system** with cone shaped emission and configurable emitters, fixed timestep game loop, **ImGui editor** with game viewport and debug visualizations, **scene serialization** with **Cereal**, templated reference counted **resource manager**, **glTF model loading** with entity hierarchy, and a tile based **grid editor** with raycasting placement.
+For **block A** of my **second year** at **BUAS** I built engine systems in **C++** from scratch:
+
+- **ECS-based particle system** with cone shaped emission and configurable emitters.
+- **ImGui editor** with game viewport and debug visualizations.
+- **Scene serialization** with **Cereal**.
+- **Resource manager** with templates and reference counting.
+- **glTF model loading** with entity hierarchy.
+- **Tile based Grid Editor** with raycasting placement.
 
 </div>
 
