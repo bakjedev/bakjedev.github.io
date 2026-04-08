@@ -21,7 +21,7 @@ For **block A** of my **second year** at **BUAS** I built engine systems in **C+
 - **Scene serialization** with **Cereal**.
 - **Resource manager** with templates and reference counting.
 - **glTF model loading** with entity hierarchy.
-- **Tile based Grid Editor** with raycasting placement.
+- **Tile based grid editor** with raycasting placement.
 
 </div>
 
