@@ -14,7 +14,7 @@ priority: 4
 
 <div class="project-details" markdown="1">
 
-For **block D** of my **second year** at **BUAS** I worked together with a team to create a **3D voxel-based puzzle platformer**. I mainly worked as a **gameplay programmer** on the **puzzle elements** and the **UI**. Working with the engine's custom scripting (**AngleScript**) and editor.
+For **block D** of my **second year** at **BUAS** I worked together with a team to create a **3D voxel-based puzzle platformer**. I mainly worked as a **gameplay programmer** on the **puzzle elements** and the **UI**. Working with the engine's custom scripting (**AngelScript**) and editor.
 
 </div>
 
