@@ -7,4 +7,6 @@ priority: 3
 
 ![thumbnail](../assets/images/asset_warden/asset_warden.png)
 
+[![asset-warden-godot](https://gh-card.dev/repos/bakjedev/asset-warden-godot.svg)](https://github.com/bakjedev/asset-warden-godot)
+
 ##### ...WIP...
