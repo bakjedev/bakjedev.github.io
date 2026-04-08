@@ -59,16 +59,21 @@ void main(uint3 dispatchThreadID : SV_DispatchThreadID)
   RenderObject obj = renderObjects[index];
   MeshInfo info = meshInfos[obj.meshID];
 
-  outputCommands[index].indexCount = info.indexCount;
-  outputCommands[index].instanceCount = 1;
-  outputCommands[index].firstIndex = info.firstIndex;
-  outputCommands[index].vertexOffset = info.vertexOffset;
-  outputCommands[index].firstInstance = index;
+  uint countedIndex;
+  InterlockedAdd(drawCount[0], 1, countedIndex);
+
+  outputCommands[countedIndex].indexCount = info.indexCount;
+  outputCommands[countedIndex].instanceCount = 1;
+  outputCommands[countedIndex].firstIndex = info.firstIndex;
+  outputCommands[countedIndex].vertexOffset = info.vertexOffset;
+  outputCommands[countedIndex].firstInstance = index;
 }
 ```
 {% endraw %}
 
 Notice `firstInstance = index`. That's not a mistake. I'll explain why in the next section.
+
+Also notice `InterlockedAdd(drawCount[0], 1, countedIndex)`. Instead of writing commands at a fixed index, the compute shader atomically increments a counter and uses that as the write index. This is why `drawIndexedIndirectCount` is used instead of `drawIndexedIndirect`: the draw count lives in a GPU buffer that the compute shader writes to. Right now every object gets written, so the count always equals the total. But once some form of culling is added, the compute shader can simply skip culled objects and it will automatically only count the surviving ones. The CPU never needs to know how many survived.
 
 ### Per-object data
 
