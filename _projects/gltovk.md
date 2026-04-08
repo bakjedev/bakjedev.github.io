@@ -1,8 +1,8 @@
 ---
 title: "Vulkan Renderer Replacement"
 image: "assets/images/from_gl_to_vk/sponzavulkan1_thumbnail.png"
-pinned: true
-priority: 2
+pinned: false
+priority: 3
 ---
 
 ![sponza vulkan image 1](/assets/images/from_gl_to_vk/sponzavulkan1.png)

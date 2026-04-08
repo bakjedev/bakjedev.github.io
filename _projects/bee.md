@@ -2,7 +2,7 @@
 title: Custom Engine
 image: "assets/images/bee/bee_thumbnail.png"
 pinned: false
-priority: 5
+priority: 6
 ---
 
 ![thumbnail](/assets/images/bee/bee.png)

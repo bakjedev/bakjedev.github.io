@@ -2,7 +2,7 @@
 title: "Dusty Mayhem"
 image: "assets/images/dusty_mayhem/dusty_mayhem_thumbnail.png"
 pinned: false
-priority: 6
+priority: 7
 ---
 
 ![thumbnail](../assets/images/dusty_mayhem/dusty_mayhem.png)

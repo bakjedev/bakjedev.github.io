@@ -2,7 +2,7 @@
 title: "Zentera"
 image: "assets/images/zentera/zentera_thumbnail.png"
 pinned: false
-priority: 4
+priority: 5
 ---
 
 ![thumbnail](../assets/images/zentera/zentera.png)

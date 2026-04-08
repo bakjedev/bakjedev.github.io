@@ -2,7 +2,7 @@
 title: "CPU Raytracer"
 image: "assets/images/voxpopuli/voxpopuli_thumbnail.png"
 pinned: false
-priority: 7
+priority: 8
 ---
 
 ![thumbnail](../assets/images/voxpopuli/voxpopuli.png)
