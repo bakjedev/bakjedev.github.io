@@ -2,7 +2,7 @@
 title: "Pitfall 3D"
 image: "assets/images/pitfall3d/pitfall3d.gif"
 pinned: false
-priority: 5
+priority: 7
 ---
 
 ![thumbnail](../assets/images/pitfall3d/pitfall3d.gif)
