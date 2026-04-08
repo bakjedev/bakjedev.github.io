@@ -26,6 +26,10 @@ h1,h2,h3 {
   line-height: 1.2;
 }
 
+p code {
+  font-size: 0.9em;
+}
+
 nav {
   text-align: center;
   flex: 1;
