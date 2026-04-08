@@ -18,6 +18,8 @@ For **block B** of my **first year** at **BUAS** I created a **3D** platformer g
 
 - **OpenGLES Rendering**: 3D graphics with textured meshes and basic lighting.
 - **Bullet physics integration**: 3D collision and physics simulation.
+- **UI**: Simple text and buttons using ImGui.
+- **Gameplay**: Temple Runner-esque infinite platformer.
 
 </div>
 
