@@ -3,7 +3,7 @@ title: Exporting Bézier Splines from Blender to glTF
 datePosted: Apr 2025
 image: "assets/images/beetle/spline.png"
 project: beetle
-priority: 1
+priority: 5
 ---
 
 ![spline](../assets/images/beetle/spline.png)

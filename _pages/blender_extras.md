@@ -3,7 +3,7 @@ title: Turning glTF Extras into ECS Components
 datePosted: Apr 2025
 image: "assets/images/beetle/blender_properties.png"
 project: beetle
-priority: 2
+priority: 4
 ---
 
 ![blender properties](../assets/images/beetle/blender_properties.png)
