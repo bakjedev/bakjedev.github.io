@@ -26,8 +26,10 @@ Built a **Vulkan** renderer in **C++** from scratch, starting from a basic trian
 
 </div>
 
-[![procrastinate](https://gh-card.dev/repos/bakjedev/procrastinate.svg)](https://github.com/bakjedev/procrastinate)
-
 ## Posts
 
 {% include related_posts.html project="gpudriven" %}
+
+## Github repository
+
+[![procrastinate](https://gh-card.dev/repos/bakjedev/procrastinate.svg)](https://github.com/bakjedev/procrastinate)

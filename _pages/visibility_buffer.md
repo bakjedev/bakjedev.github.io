@@ -14,7 +14,6 @@ At first, we used forward rendering. A naive way to render everything in a singl
 The visibility buffer takes the split between geometry and shading even further. Instead of storing interpolated attributes, the first pass now only stores what's needed to reconstruct them: a triangle ID and a draw ID packed into a single uint32. Four bytes per pixel, fixed cost no matter how complex the scene is. The second pass reconstructs everything from scratch, but only for pixels that are actually visible.
 
 ### Pass 1: The thin G-buffer
-
 The pre-pass is a normal rasterization pass which, for each pixel, stores which triangle covered it. That's it. No lighting, no attributes, no material data. Just a triangle ID and a draw ID packed into a single uint32 and written to a single render target.
 
 So the fragment shader would look something like this:
@@ -40,7 +39,46 @@ As a quick visualization, I’ve assigned a unique color to each triangle here.
 ![visualized triangles](../assets/images/gpu_driven/colorful.jpg)
 
 ### Pass 2: Reconstruction
+In a normal deferred renderer, the hardware rasterizer interpolates vertex attributes automatically and writes them to the G-buffer. In pass 2 there is no rasterizer. A compute shader runs over every pixel, unpacks the triangle and draw IDs, and reconstructs the attributes manually.
 
+The compute shader would look something like this:
+
+{% raw %}
+```cpp
+void main(uint3 dispatchThreadID : SV_DispatchThreadID)
+{
+  uint2 pixel = uint2(dispatchThreadID.xy);
+
+  uint packed = visibilityImage.Load(int3(pixel.x, pixel.y, 0));
+  if (packed == 0xFFFFFFFFu) {
+    renderImage[pixel] = float4(float3(0.0), 1.0);
+    return;
+  }
+
+  uint primitiveID = packed >> 16;
+  uint drawID = packed & 0xFFFF;
+  DrawIndexedIndirectCommand command = outputCommands[drawID];
+  RenderObject object = renderObjects[command.firstInstance];
+
+  uint triangle_0 = indexBuffer[command.firstIndex + primitiveID * 3 + 0];
+  uint triangle_1 = indexBuffer[command.firstIndex + primitiveID * 3 + 1];
+  uint triangle_2 = indexBuffer[command.firstIndex + primitiveID * 3 + 2];
+
+  VertexInputShading vertex_0 = vertexBuffer[command.vertexOffset + triangle_0];
+  VertexInputShading vertex_1 = vertexBuffer[command.vertexOffset + triangle_1];
+  VertexInputShading vertex_2 = vertexBuffer[command.vertexOffset + triangle_2];
+
+...
+```
+{% endraw %}
+
+Each pixel unpacks the two IDs. The visibility image is cleared to `0xFFFFFFFF` before the pre-pass, so any pixel that was never written to, such as sky or empty space, will still hold that value and gets skipped. Otherwise the draw ID indexes into the indirect command buffer to get the object ID. In this renderer the object ID is stored in `firstInstance` of the indirect draw command, but it could come from anywhere as long as the pre-pass and the shading pass agree on how to look it up. From the object you get the mesh, and from the mesh you get the index and vertex buffer offsets. Three index lookups give you the three vertices of the triangle that covered this pixel.
+
+If you want to know more about how the indirect command buffer is set up and why `firstInstance` stores the object ID, I cover that in [Driving my Renderer with the GPU](../pages/gpu_driven).
+
+#### Screen Space Barycentrics
+
+The hardware rasterizer normally interpolates vertex attributes automatically. Like I mentioned before, there is no rasterizer in pass 2, so the attributes have to be reconstructed manually. To do that, the position of the current pixel within the triangle needs to be expressed as a weighted combination of the three vertices. Those weights are the barycentric coordinates.
 
 
 ##### ...WIP...
