@@ -20,7 +20,7 @@ The pre-pass is a normal rasterization pass which, for each pixel, stores which 
 So the fragment shader would look something like this:
 
 {% raw %}
-```slang
+```glsl
 uint main(VertexOutput input, uint primitiveID : SV_PrimitiveID) : SV_Target
 {
   uint packed = (primitiveID << 16) | (input.drawID & 0xFFFF);
