@@ -83,7 +83,7 @@ The idea is simple: the weight of each vertex is equal to how close the pixel is
 
 ![barycentric coords sketch](../assets/images/gpu_driven/barycentric_coordinates.png)
 
-Before calculating the areas, the vertex positions need to be projected to screen space. This is done by multiplying each vertex position by the same MVP matrix used in the pre-pass, then dividing XYZ by W to get Normalized Device Coordinates (NDC), and finally remapping from the NDC range to pixel coordinates. In code that would look something like this:
+Before calculating the areas, the vertex positions need to be projected to screen space. This is done by multiplying each vertex position by the same MVP matrix used in the pre-pass, then dividing `xyz` by `w` to get Normalized Device Coordinates (NDC), and finally remapping from the NDC range to pixel coordinates. In code that would look something like this:
 
 {% raw %}
 ```cpp
