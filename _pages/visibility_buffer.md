@@ -156,4 +156,25 @@ This solves the problem. It is the same thing the hardware interpolator does aut
 ![shaded image](../assets/images/gpu_driven/shaded.jpg)
 
 {% endraw %}
-##### ...WIP...
+
+### Overdraw
+Because pass 2 reads from the visibility image rather than running per fragment, each pixel is shaded exactly once. The visibility image already decided which triangle was closest, so there is nothing to overwrite. To visualize this I built an overdraw heatmap that counts writes per pixel.
+
+Before:
+
+![before](../assets/images/gpu_driven/filtererd.jpg)
+
+After:
+
+![after](../assets/images/gpu_driven/filtererdnew.jpg)
+
+### Conclusion
+The visibility buffer is not strictly better than deferred. It trades bandwidth for compute. Pass 1 is cheap, but pass 2 is doing significantly more work per pixel than reading from a G-buffer (matrix multiplications, index buffer fetches, manual barycentric interpolation). On simple scenes with low overdraw, a G-buffer is faster.
+
+Where the visibility buffer wins is at scale. As the scene gets more complex, the G-buffer geometry pass gets more expensive while the visibility buffer pass 1 cost stays flat at 4 bytes per pixel.
+
+Transparency is still hard. The visibility buffer only stores one triangle per pixel, so transparent materials need a separate forward pass on top.
+
+MSAA is cheaper than with deferred. Multisampling a single uint32 render target costs a fraction of multisampling a full G-buffer. The shading pass does have to resolve per sample rather than per pixel, but the memory savings outweigh the negatives.
+
+For a renderer dealing with hundreds of thousands of objects, the flat bandwidth cost and the complete decoupling of shading from geometry make it the right tradeoff.
