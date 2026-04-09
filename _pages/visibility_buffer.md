@@ -166,7 +166,7 @@ Before:
 
 After:
 
-![after](../assets/images/gpu_driven/filtererdnew.jpg)
+![after](../assets/images/gpu_driven/filterednew.jpg)
 
 ### Conclusion
 The visibility buffer is not strictly better than deferred. It trades bandwidth for compute. Pass 1 is cheap, but pass 2 is doing significantly more work per pixel than reading from a G-buffer (matrix multiplications, index buffer fetches, manual barycentric interpolation). On simple scenes with low overdraw, a G-buffer is faster.
