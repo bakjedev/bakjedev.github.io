@@ -77,7 +77,6 @@ Each pixel unpacks the two IDs. The visibility image is cleared to `0xFFFFFFFF` 
 If you want to know more about how the indirect command buffer is set up and why `firstInstance` stores the object ID, I cover that in [Driving my Renderer with the GPU](../pages/gpu_driven).
 
 #### Screen Space Barycentrics
-
 The hardware rasterizer normally interpolates vertex attributes automatically. Like I mentioned before, there is no rasterizer in pass 2, so the attributes have to be reconstructed manually. To do that, the position of the current pixel within the triangle needs to be expressed as a weighted combination of the three vertices. Those weights are the barycentric coordinates.
 
 
