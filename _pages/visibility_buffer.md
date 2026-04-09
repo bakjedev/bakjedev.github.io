@@ -128,7 +128,7 @@ float bary_2 = 1.0 - bary_0 - bary_1;
 ```
 {% endraw %}
 
-There is a problem with the barycentric weights calculated in screen space. Perspective projection is non-linear, so interpolating linearly in screen space does not match what the correct 3D interpolation would be. Attributes like UVs and normals end up visibly wrong, especially on triangles at an angle to the camera. This is the perspective correction problem, and it is exactly what the hardware interpolator solves automatically in normal rendering
+There is a problem with the barycentric weights calculated in screen space. Perspective projection is non-linear, so interpolating linearly in screen space does not match what the correct 3D interpolation would be. Attributes like UVs and normals end up visibly wrong, especially on triangles at an angle to the camera.
 
 ![image of correction](../assets/images/gpu_driven/correction.png)
 
