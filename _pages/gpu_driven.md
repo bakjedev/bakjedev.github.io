@@ -63,7 +63,7 @@ struct RenderObject
 Then the compute shader looks like this:
 
 {% raw %}
-```glsl
+```cpp
 void main(uint3 dispatchThreadID : SV_DispatchThreadID)
 {
   uint index = dispatchThreadID.x;
@@ -99,7 +99,7 @@ You would think that `firstInstance` is for instancing the same mesh multiple ti
 In the vertex shader, `SV_StartInstanceLocation` receives whatever was written to `firstInstance`. Combined with `SV_InstanceID` you get a unique index per object:
 
 {% raw %}
-```glsl
+```cpp
 VertexOutput main(VertexInput input, uint instanceID : SV_InstanceID, uint baseInstance : SV_StartInstanceLocation, uint drawID : SV_DrawIndex)
 {
   VertexOutput output;
