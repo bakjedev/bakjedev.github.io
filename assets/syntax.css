@@ -32,6 +32,7 @@
 .highlight .c1  { color: #cd8c3d; font-style: italic; } /* single-line comments */
 .highlight .cm  { color: #cd8c3d; font-style: italic; } /* multi-line comments */
 .highlight .cp  { color: #95a99f; } /* preprocessor: #include, #define */
+.highlight .mh  { color: #96a6c8; } /* CONSTANT i think? */
 
 
 
