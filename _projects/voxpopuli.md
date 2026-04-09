@@ -26,6 +26,10 @@ For **block C** of my **first year** at **BUAS** I created a **3D CPU raytracing
 
 For the last **2 weeks** I had to use this engine to create a small **puzzle game** that uses the **ray tracing** as its **main mechanic**.
 
+<video width="640" controls>
+  <source src="../assets/images/voxpopuli/absorb.mp4" type="video/mp4">
+</video>
+
 </div>
 
 ##### ...WIP...
