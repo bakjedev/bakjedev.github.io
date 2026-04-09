@@ -22,7 +22,7 @@ Built a **Vulkan** renderer in **C++** from scratch, starting from a basic trian
 
 **Cross platform** (Linux/Windows), shaders written in **Slang**.
 
-**Self study** project at **BUAS** (students choose a project to work on alongside main coursework).
+**Self study** project for **block B and C** of my third year at **BUAS** (students choose a project to work on alongside main coursework).
 
 </div>
 
