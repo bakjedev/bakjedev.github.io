@@ -149,7 +149,7 @@ float2 uv = (vertex_0.tex_coord * b0w + vertex_1.tex_coord * b1w + vertex_2.tex_
 float3 normal = (vertex_0.normal * b0w + vertex_1.normal * b1w + vertex_2.normal * b2w) * inv_denom;
 ```
 
-This solves the problem. It is the same thing the hardware interpolator does automatically in a normal rendering pass.
+This solves the problem and its the same thing the hardware interpolator does automatically in a normal rendering pass.
 
 ![shaded image](../assets/images/gpu_driven/shaded.jpg)
 
