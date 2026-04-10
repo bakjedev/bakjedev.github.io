@@ -127,6 +127,7 @@ bool isOnFrustum(Frustum frustum, MeshInfo info, float4x4 world) {
 
 The bounding box min and max are stored per mesh in the mesh info buffer, already available in the compute shader. Each corner is transformed to world space using the object's model matrix before testing. If all 8 corners fails a plane, the object is culled and no draw command is written.
 
+{% raw %}
 ```cpp
 if (isOnFrustum(pushConst.frustum, info, obj.model)) {
   uint countedIndex;
@@ -139,6 +140,7 @@ if (isOnFrustum(pushConst.frustum, info, obj.model)) {
   outputCommands[countedIndex].firstInstance = index;
 }
 ```
+{% endraw %}
 
 ### Conclusion
 The improvement scales directly with how many objects fall outside the view. In scenes with a lot of geometry the compute shader discards the majority of objects before any rasterization work happens. The only CPU work per frame is recalculating and uploading the frustum, which is six plane equations.
