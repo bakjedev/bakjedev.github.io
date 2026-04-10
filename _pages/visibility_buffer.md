@@ -128,11 +128,9 @@ float bary_2 = 1.0 - bary_0 - bary_1;
 ```
 {% endraw %}
 
-There is a problem with the barycentric weights calculated in screen space. Perspective projection distorts distances. A vertex that is further away gets closer to the center of the screen, so a pixel that is in the middle of two vertices in screen space may not be in the middle of those vertices in 3D. This means interpolating UVs and normals linearly in screen space may give the wrong result, especially on triangles at an angle to the camera. The fix is to weight each barycentric coordinate by `1/w` before interpolating, then renormalizing.
+There is a problem with the barycentric weights calculated in screen space. Perspective projection distorts distances. A vertex that is further away gets closer to the center of the screen, so a pixel that is in the middle of two vertices in screen space may not be in the middle of those vertices in 3D. This means interpolating UVs and normals linearly in screen space may give the wrong result, especially on triangles at an angle to the camera. The fix is to weight each barycentric coordinate by `1/w` for its vertex. Vertices that are further away now get a smaller weight, which counteracts the distortion. After multiplying by these depth weights the coordinates no longer add up to 1, so they need to be renormalized by dividing by their sum.
 
 ![image of correction (by ai)](../assets/images/gpu_driven/correction.png)
-
-The fix is to weight each barycentric coordinate by `1/clip.w` for its vertex. Vertices that are further away get a smaller weight, which counteracts the distortion introduced by the perspective divide. After multiplying by these depth weights the coordinates no longer add up to 1, so they need to be normalized again by dividing by their sum.
 
 {% raw %}
 ```cpp
