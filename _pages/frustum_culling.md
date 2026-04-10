@@ -91,7 +91,7 @@ If you want to know more about these plane equations, the paper is worth reading
 
 ### Testing an object
 
-With the frustum as 6 planes, testing a point is a dot product. For each plane, calculate the distance from the plane to the point. If the distance is negative, the point is on the outside. If it is outside any of the planes, the point is not inside the frustum.
+With the frustum as 6 planes, testing a point is a dot product. For each plane, calculate the distance from the plane to the point. If the distance is negative, the point is on the outside. If it is outside any of the planes, the point is outside the frustum.
 
 Testing a single point works for small objects but fails for larger ones that might overlap a frustum plane. Instead, we go through each plane and test the 8 corners of the object's AABB. If all 8 corners are outside any of the planes, the entire object is outside the frustum and can be skipped.
 
