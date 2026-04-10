@@ -128,8 +128,6 @@ float bary_2 = 1.0 - bary_0 - bary_1;
 ```
 {% endraw %}
 
-There is a problem with the barycentric weights calculated in screen space. Perspective projection is non-linear, so interpolating linearly in screen space does not match what the correct 3D interpolation would be. Attributes like UVs and normals end up visibly wrong, especially on triangles at an angle to the camera.
-
 There is a problem with the barycentric weights calculated in screen space. Perspective projection distorts distances. A vertex that is further away gets closer to the center of the screen, so a pixel that is in the middle of two vertices in screen space may not be in the middle of those vertices in 3D. This means interpolating UVs and normals linearly in screen space may give the wrong result, especially on triangles at an angle to the camera. The fix is to weight each barycentric coordinate by `1/w` before interpolating, then renormalizing.
 
 ![image of correction (by ai)](../assets/images/gpu_driven/correction.png)
