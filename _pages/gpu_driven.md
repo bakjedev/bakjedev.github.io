@@ -119,6 +119,9 @@ VertexOutput main(VertexInput input, uint instanceID : SV_InstanceID, uint baseI
 
 It reads it back and gets the correct transform from the storage buffer. Every object gets its own data with no CPU involvement. Note that `firstInstance` is set to `index`, not `countedIndex`. When culling is added, those two numbers will start to differ: a command might be written at position 7 in the buffer but belong to render object 42. Using `index` makes sure that it uses the original object ID so the vertex shader always finds the right transform no matter where the command ended up.
 
+### Synchronization
+Now I haven't mentioned synchronization, which is quite important. The compute shader writes to the indirect buffer and the draw count buffer. The graphics pass reads from both. We need a pipeline barrier between the two passes to ensure the graphics pass does not start before the compute shader has finished writing. Without it the GPU may read partially written or undefined data.
+
 ### Conclusion
 
 With the indirect buffer filled by the compute shader and a single `drawIndexedIndirectCount` call, my renderer handled 636,000 objects at 60 FPS with one draw call on the graphics queue.

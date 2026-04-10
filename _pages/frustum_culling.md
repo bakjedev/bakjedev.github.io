@@ -95,6 +95,8 @@ With the frustum as 6 planes, testing a point is a dot product. For each plane, 
 
 Testing a single point works for small objects but fails for larger ones that might overlap a frustum plane. Instead, we go through each plane and test the 8 corners of the object's AABB. If all 8 corners are outside any of the planes, the entire object is outside the frustum and can be skipped.
 
+Important to note is that this test is conservative. An object can pass all 6 plane tests and still not be visible, for example a large object whose corners surround the frustum entirely. In practice this is rare and the performance cost of a more precise test rarely justifies it.
+
 You can do this test on the CPU, where you loop through every object and only submit a draw call if it is visible. That works, but it still requires the CPU to process every object every frame. Moving the test into the compute shader means all objects are tested in parallel on the GPU. However, this does require you to have some sort of GPU-driven setup.
 
 {% raw %}
