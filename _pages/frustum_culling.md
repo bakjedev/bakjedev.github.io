@@ -11,10 +11,10 @@ priority: 3
 
 When rendering objects, you might think that if they fall outside the frame, the GPU automatically handles that for you. And it does, but not for free. It still has to process every object, rasterize it, and only then discard the fragments that fall outside the view. Frustum culling solves this by rejecting objects earlier in the pipeline, before any rasterization work is done. The frustum is the shape of the camera's view, and culling is just the process of discarding what falls outside it.
 
-In this post I cover how to represent a frustum mathematically, how to test objects against it, and how to integrate it into a GPU compute shader that culls hundreds of thousands of objects in parallel. The math applies to any renderer, but the GPU integration connects to the GPU-driven pipeline I built in [Driving my Renderer with the GPU](../pages/gpu_driven).
+In this post I cover how to represent a frustum mathematically, how to test objects against it, and how I integrate it with my GPU-driven pipeline from [Driving my Renderer with the GPU](../pages/gpu_driven).
 
 ### Represent Represent!
-A frustum can be represented as 6 planes. Each plane divides space into two halves: inside and outside. An object is visible if it is on the inside of all 6 planes at the same time. If for any of the test it fails, it is outside and can be skipped.
+A frustum can be represented as 6 planes. Each plane divides space into two halves: inside and outside. An object is visible if it is on the inside of all 6 planes at the same time. If for any of the tests it fails, it is outside and can be skipped.
 
 Each plane is stored as a normal vector pointing inward and a distance from the origin:
 
@@ -42,7 +42,7 @@ struct Frustum
 
 ![sketch for frustum representation](../assets/images/gpu_driven/frustum_represent.png)
 
-Now you’ll need to get the 6 planes for your current camera position and orientation from somewhere. The easiest way is to use the projection (and view) matrix. This is based on the [paper by Gribb and Hartmann](https://www.gamedevs.org/uploads/fast-extraction-viewing-frustum-planes-from-world-view-projection-matrix.pdf).
+Now you’ll need to get the 6 planes for your current camera's transform from somewhere. The easiest way is to use the projection (and view) matrix. This is based on the [paper by Gribb and Hartmann](https://www.gamedevs.org/uploads/fast-extraction-viewing-frustum-planes-from-world-view-projection-matrix.pdf).
 
 {% raw %}
 ```cpp
@@ -91,9 +91,11 @@ If you want to know more about these plane equations, the paper is worth reading
 
 ### Testing an object
 
-With the frustum as 6 planes, testing an object is a dot product. For each plane, calculate the distance from the plane to the point. If the distance is negative, the point is on the outside. If it is outside any one plane, the object can be culled.
+With the frustum as 6 planes, testing a point is a dot product. For each plane, calculate the distance from the plane to the point. If the distance is negative, the point is on the outside. If it is outside any of the planes, the point is not inside the frustum.
 
-Testing a single point works for small objects but fails for larger ones that might overlap a frustum plane. Instead, the 8 corners of the object's AABB are tested against each plane. If all 8 corners are outside any single plane, the entire object is outside the frustum and can be skipped.
+Testing a single point works for small objects but fails for larger ones that might overlap a frustum plane. Instead, we go through each plane and test the 8 corners of the object's AABB. If all 8 corners are outside any of the planes, the entire object is outside the frustum and can be skipped.
+
+You can do this test on the CPU, where you loop through every object and only submit a draw call if it is visible. That works, but it still requires the CPU to process every object every frame. Moving the test into the compute shader means all objects are tested in parallel on the GPU. However, this does require you to have some sort of GPU-driven setup.
 
 {% raw %}
 ```cpp
@@ -125,7 +127,9 @@ bool isOnFrustum(Frustum frustum, MeshInfo info, float4x4 world) {
 ```
 {% endraw %}
 
-The bounding box min and max are stored per mesh in the mesh info buffer, already available in the compute shader. Each corner is transformed to world space using the object's model matrix before testing. If all 8 corners fails a plane, the object is culled and no draw command is written.
+The bounding box min and max are stored per mesh in the mesh info buffer, already available in the compute shader. Each corner is transformed to world space using the object's model matrix before testing.
+
+All the objects that pass the test write their draw command and increment the draw count. Objects that fail are simply skipped.
 
 {% raw %}
 ```cpp
