@@ -85,7 +85,7 @@ inline Plane ExtractPlane(const glm::mat4& matrix, PlaneType type)
 ```
 {% endraw %}
 
-Each plane is extracted by adding or subtracting rows of the view projection matrix. The left plane is row4 + row1, the right is row4 - row1, and so on. This comes directly from the paper, which derives each plane equation. The result is then normalized so the distance value is meaningful for the point test.
+Each plane is extracted by adding or subtracting rows of the view projection matrix. The left plane is `row4 + row1`, the right is `row4 - row1`, and so on. This comes directly from the paper, which derives each plane equation. The result is then normalized so the distance value is meaningful for the point test.
 
 If you want to know more about these plane equations, the paper is worth reading. The math is approachable if you are comfortable with homogeneous coordinates.
 
