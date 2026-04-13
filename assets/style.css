@@ -177,6 +177,7 @@ nav a:visited {
   }
   .burger {
     display: flex;
+    align-self: flex-start;
   }
   .top-bar {
     position: static;
@@ -184,6 +185,7 @@ nav a:visited {
     align-items: center;
     padding: 10px;
     gap: 0;
+    border-bottom: none;
   }
   .stuff-left,
   nav,
