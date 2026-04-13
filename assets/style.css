@@ -291,8 +291,15 @@ p:has(.more-link) {
     justify-content: space-between;
     align-items: center;
   }
+  .post-grid-related,
   .post-grid {
     grid-template-columns: 1fr;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .post-card-related img,
+  .post-card img {
+    height: 250px;
   }
 }
 @media (min-width: 601px) {
