@@ -5,6 +5,7 @@ image: "assets/images/gpu_driven/gpu_driven.jpg"
 project: gpudriven
 pinned: true
 priority: 1
+tags: [Graphics]
 ---
 
 ![thumbnail](../assets/images/gpu_driven/gpu_driven.jpg)
