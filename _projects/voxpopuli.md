@@ -37,3 +37,7 @@ For the last **2 weeks** I had to use this engine to create a small **puzzle gam
 ## Images
 
 ![glass ball](/assets/images/voxpopuli/ruhtracer.png)
+
+## Github repository
+
+[![procrastinate](https://gh-card.dev/repos/bakjedev/voxpopuli.svg)](https://github.com/bakjedev/voxpopuli)

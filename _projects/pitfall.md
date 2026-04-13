@@ -23,4 +23,8 @@ For **block A** of my **first year** at **BUAS** I created a **2D** platformer g
 
 </div>
 
+## Github repository
+
+[![procrastinate](https://gh-card.dev/repos/bakjedev/pitfall.svg)](https://github.com/bakjedev/pitfall)
+
 ##### ...WIP...
