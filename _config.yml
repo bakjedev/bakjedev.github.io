@@ -19,3 +19,4 @@ defaults:
 post_tags:
   C++: "#3d78c4"
   Vulkan: "#c43d4a"
+  Graphics: "#03fc77"
