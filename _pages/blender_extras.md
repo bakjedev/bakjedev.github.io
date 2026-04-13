@@ -4,6 +4,7 @@ datePosted: Apr 2025
 image: "assets/images/beetle/blender_properties.png"
 project: beetle
 priority: 4
+tags: [Engine, Tools]
 ---
 
 ![blender properties](../assets/images/beetle/blender_properties.png)

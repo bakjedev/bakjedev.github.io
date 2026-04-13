@@ -5,7 +5,7 @@ image: "assets/images/from_gl_to_vk/render_thumbnail.webp"
 project: gltovk
 pinned: true
 priority: 0
-tags: [Graphics]
+tags: [Graphics, Vulkan]
 ---
 
 ![render](/assets/images/from_gl_to_vk/render.webp)

@@ -4,6 +4,7 @@ datePosted: Apr 2025
 image: "assets/images/beetle/spline.png"
 project: beetle
 priority: 5
+tags: [Engine, Tools]
 ---
 
 ![spline](../assets/images/beetle/spline.png)
