@@ -167,46 +167,68 @@ nav a:visited {
   transition: all 0.3s;
 }
 
+.mobile-overlay {
+  display: none;
+}
+
 @media (max-width: 600px) {
   body {
     margin: auto;
   }
-  .burger {
-    display: flex;
-    align-self: center;
-  }
   .top-bar {
     position: static;
-    flex-wrap: wrap;
-    align-items: left;
     padding: 10px;
-    gap: 0;
-    border-bottom: none;
+    justify-content: space-between;
   }
   nav {
-    display: flex;
-    flex: 1;
-    justify-content: flex-start;
-    padding-left: 10px;
+    text-align: left;
+    flex: unset;
   }
   .stuff-left,
   .stuff-right {
-    flex: 0 0 100%;
     display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-    padding: 8px 0 8px 52px;
   }
-  .top-bar.open .stuff-left,
-  .top-bar.open .stuff-right {
+  .burger {
     display: flex;
+  }
+  .mobile-overlay {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    max-width: 300px;
+    height: 100%;
+    background: #EEEEEE;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 30px 30px;
+    gap: 24px;
+    box-shadow: -4px 0 12px rgba(0,0,0,0.15);
+    transition: right 0.3s ease;
+  }
+  .mobile-overlay.open {
+    right: 0;
+  }
+  .mobile-overlay a {
+    text-decoration: none;
+    color: #444;
+    font-size: 18px;
+  }
+  .overlay-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: #444;
   }
   .post-grid {
     grid-template-columns: 1fr;
   }
 }
-
 @media (min-width: 601px) {
   .top-bar {
     flex-direction: row;

@@ -9,23 +9,31 @@
 </head>
 <body>
   <header class="top-bar">
-    <button class="burger" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="stuff-left">
+      <a href="mailto:contact@bakje.dev">E-mail</a>
+      <a href="/assets/Resume-Quinten-Bubberman.pdf" target="_blank">Resume</a>
+    </div>
     <nav>
       <a href="/">Home</a>
       <a href="/projects">Projects</a>
       <a href="/pages">Posts</a>
     </nav>
-    <div class="stuff-left">
-      <a href="mailto:contact@bakje.dev">E-mail</a>
-      <a href="/assets/Resume-Quinten-Bubberman.pdf" target="_blank">Resume</a>
-    </div>
     <div class="stuff-right">
       <a href="https://github.com/bakjedev">Github</a>
       <a href="https://www.linkedin.com/in/quinten-bubberman/">LinkedIn</a>
     </div>
+    <button class="burger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </header>
+
+  <div class="mobile-overlay">
+    <button class="overlay-close" aria-label="Close menu">✕</button>
+    <a href="mailto:contact@bakje.dev">E-mail</a>
+    <a href="/assets/Resume-Quinten-Bubberman.pdf" target="_blank">Resume</a>
+    <a href="https://github.com/bakjedev">Github</a>
+    <a href="https://www.linkedin.com/in/quinten-bubberman/">LinkedIn</a>
+  </div>
 
   {% if page.title %}
     <h1>{{ page.title }}</h1>
@@ -53,11 +61,24 @@
   </script>
   <script>
     const burger = document.querySelector('.burger');
-    const topBar = document.querySelector('.top-bar');
+    const overlay = document.querySelector('.mobile-overlay');
+    const closeBtn = document.querySelector('.overlay-close');
 
     burger.addEventListener('click', () => {
-      const open = topBar.classList.toggle('open');
-      burger.setAttribute('aria-expanded', open);
+      overlay.classList.add('open');
+      burger.setAttribute('aria-expanded', true);
+    });
+
+    closeBtn.addEventListener('click', () => {
+      overlay.classList.remove('open');
+      burger.setAttribute('aria-expanded', false);
+    });
+
+    document.addEventListener('click', e => {
+      if (!overlay.contains(e.target) && !burger.contains(e.target)) {
+        overlay.classList.remove('open');
+        burger.setAttribute('aria-expanded', false);
+      }
     });
   </script>
 </body>
