@@ -197,15 +197,14 @@ nav a:visited {
     right: -100%;
     width: 70%;
     max-width: 300px;
-    height: 100%;
+    height: fit-content;
     background: #EEEEEE;
     z-index: 2000;
     display: flex;
     flex-direction: column;
     padding: 60px 30px 30px;
     gap: 24px;
-    box-shadow: -4px 0 12px rgba(0,0,0,0.15);
-    transition: right 0.3s ease;
+    transition: right 0.1s ease;
   }
   .mobile-overlay.open {
     right: 0;
