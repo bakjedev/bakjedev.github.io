@@ -120,6 +120,7 @@ nav a:hover {
   background-color: #e4e5f1;
 }
 
+.post-card-related:hover,
 .post-card:hover {
   background-color: #d2d3db;
 }
@@ -137,12 +138,14 @@ nav a:hover {
   height: 150px;
 }
 
+.post-card-related h3,
 .post-card h3 {
   padding: 15px;
   margin: 0;
   font-size: 18px;
 }
 
+.post-card-related:visited,
 .post-card:visited {
   color: #444;
 }
