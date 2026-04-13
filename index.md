@@ -1,9 +1,8 @@
 ---
 layout: default
+title: "Hi I'm Quinten Bubberman!"
 noBack: true
 ---
-
-## Hi I'm Quinten Bubberman!
 
 I'm a third-year **game programmer** at **Breda University of Applied Sciences**. I enjoy working close to the metal, focusing on **Graphics and Engine & Tools programming**. I love solving technical challenges, optimizing performance, and building systems that empower other developers and bring games to life.
 
