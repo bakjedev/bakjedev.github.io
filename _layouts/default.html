@@ -82,6 +82,11 @@
         burger.setAttribute('aria-expanded', false);
       }
     });
+
+    window.addEventListener('scroll', () => {
+      overlay.classList.remove('open');
+      burger.setAttribute('aria-expanded', false);
+    });
   </script>
 </body>
 </html>
