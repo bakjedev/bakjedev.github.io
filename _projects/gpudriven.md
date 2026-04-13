@@ -3,6 +3,7 @@ title: "Vulkan GPU-Driven Renderer"
 image: "assets/images/gpu_driven/shaded_thumbnail.jpg"
 pinned: true
 priority: 0
+tags: [C++, Vulkan]
 ---
 
 ![frustum](/assets/images/gpu_driven/shaded.jpg)

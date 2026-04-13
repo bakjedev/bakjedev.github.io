@@ -132,6 +132,7 @@ nav a:hover {
   aspect-ratio: 16 / 9;
   object-fit: cover;
   margin: 10px;
+  margin-bottom: 0px;
 }
 
 .post-card-related img {
@@ -212,6 +213,14 @@ p:has(.more-link) {
 
 .mobile-overlay {
   display: none;
+}
+
+.tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.7em;
+  color: #333;
 }
 
 @media (max-width: 600px) {

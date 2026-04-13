@@ -13,6 +13,9 @@
         <img src="{{ item.image }}" alt="Missing image">
       {% endif %}
       <h3>{{ item.title }}</h3>
+      {% for tag in item.tags %}
+        <span class="tag", style="background-color: {{ site.post-tags[tag] }}">{{ tag }}</span>
+      {% endfor %}
     </a>
   {% endfor %}
 </div>
