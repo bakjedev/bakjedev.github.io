@@ -205,6 +205,8 @@ nav a:visited {
     padding: 20px 30px;
     gap: 24px;
     transition: right 0.1s ease;
+    border: 1px solid #ddd;
+    border-top: none;
   }
   .mobile-overlay.open {
     right: 0;
