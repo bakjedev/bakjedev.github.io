@@ -16,8 +16,10 @@ I'm a third-year **game programmer** at **Breda University of Applied Sciences**
 - **Tools:** Git, Perforce, Rider, Visual Studio, NSight Graphics, Tracy, Linux
 - **Natural Languages:** Dutch, English
 
-## Pinned Projects <a href="/projects" class="more-link">more</a>
+## Pinned Projects 
 {% include grid.html collection="projects" pinned=true %}
+<a href="/projects" class="more-link">more</a>
 
-## Pinned Posts <a href="/pages" class="more-link">more</a>
+## Pinned Posts
 {% include grid.html collection="posts" pinned=true %}
+<a href="/pages" class="more-link">more</a>
