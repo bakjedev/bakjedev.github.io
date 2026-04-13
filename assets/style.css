@@ -175,8 +175,9 @@ nav a:hover {
   border-radius: 10px;
 }
 
+.more-link:visited:hover,
 .more-link:hover {
-  background-color: #9394a5;
+  color: #d2d3db
 }
 
 p:has(.more-link) {
