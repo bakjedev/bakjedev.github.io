@@ -150,23 +150,52 @@ nav a:visited {
   top: 2.8rem;
 }
 
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+.burger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #444;
+  transition: all 0.3s;
+}
+
 @media (max-width: 600px) {
   body {
     margin: auto;
   }
-
+  .burger {
+    display: flex;
+    align-self: flex-end;
+  }
   .top-bar {
     position: static;
-    flex-direction: column;
-    gap: 10px;
-    padding: 15px 10px;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 0;
   }
-
   .stuff-left,
+  nav,
   .stuff-right {
+    display: none;
+    width: 100%;
     justify-content: center;
+    padding: 8px 0;
+    gap: 20px;
+    flex-wrap: wrap;
   }
-
+  .top-bar.open .stuff-left,
+  .top-bar.open nav,
+  .top-bar.open .stuff-right {
+    display: flex;
+  }
   .post-grid {
     grid-template-columns: 1fr;
   }

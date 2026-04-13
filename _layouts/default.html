@@ -9,6 +9,9 @@
 </head>
 <body>
   <header class="top-bar">
+    <button class="burger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
     <div class="stuff-left">
       <a href="mailto:contact@bakje.dev">E-mail</a>
       <a href="/assets/Resume-Quinten-Bubberman.pdf" target="_blank">Resume</a>
@@ -47,6 +50,15 @@
         link.setAttribute('target', '_blank');
         link.setAttribute('rel', 'noopener');
       }
+    });
+  </script>
+  <script>
+    const burger = document.querySelector('.burger');
+    const topBar = document.querySelector('.top-bar');
+
+    burger.addEventListener('click', () => {
+      const open = topBar.classList.toggle('open');
+      burger.setAttribute('aria-expanded', open);
     });
   </script>
 </body>
