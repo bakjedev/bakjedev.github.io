@@ -144,6 +144,7 @@ nav a:hover {
   padding: 15px;
   margin: 0;
   font-size: 18px;
+  padding-bottom: 0px;
 }
 
 .post-card-related:visited,
@@ -220,7 +221,13 @@ p:has(.more-link) {
   padding: 2px 8px;
   border-radius: 4px;
   font-size: 0.7em;
-  color: #333;
+  color: #EEE;
+  font-weight: bold;
+}
+
+.tags {
+  margin-left: 14px;
+  margin-bottom: 10px;
 }
 
 @media (max-width: 600px) {
