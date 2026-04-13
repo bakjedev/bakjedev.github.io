@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Hi I'm Quinten Bubberman!"
+title: "Hi, I'm Quinten Bubberman!"
 noBack: true
 ---
 
