@@ -16,6 +16,6 @@ defaults:
     values:
       layout: "default"
 
-post-tags:
+post_tags:
   C++: "#3d78c4"
   Vulkan: "#c43d4a"
