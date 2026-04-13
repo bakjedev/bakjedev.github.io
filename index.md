@@ -18,8 +18,8 @@ I'm a third-year **game programmer** at **Breda University of Applied Sciences**
 
 ## Pinned Projects 
 {% include grid.html collection="projects" pinned=true %}
-<a href="/projects" class="more-link">more</a>
+<a href="/projects" class="more-link">More Projects</a>
 
 ## Pinned Posts
 {% include grid.html collection="posts" pinned=true %}
-<a href="/pages" class="more-link">more</a>
+<a href="/pages" class="more-link">More Posts</a>

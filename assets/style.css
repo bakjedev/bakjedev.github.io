@@ -89,6 +89,11 @@ nav a:hover {
   text-decoration: none;
 }
 
+#pinned-posts,
+#pinned-projects {
+  text-align: center;
+}
+
 .post-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -139,9 +144,19 @@ nav a:hover {
 }
 
 .more-link {
-  font-size: 0.5em;
   font-weight: normal;
+  text-decoration: none;
   color: inherit;
+  display: inline-block;
+  text-align: center;
+  background-color: #e4e5f1;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+}
+
+p:has(.more-link) {
+  text-align: center;
 }
 
 .more-link:visited {
