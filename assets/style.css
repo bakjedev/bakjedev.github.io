@@ -177,18 +177,23 @@ nav a:visited {
   }
   .burger {
     display: flex;
-    align-self: flex-start;
+    align-self: center;
   }
   .top-bar {
     position: static;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     padding: 10px;
     gap: 0;
     border-bottom: none;
   }
+  nav {
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+    padding-left: 10px;
+  }
   .stuff-left,
-  nav,
   .stuff-right {
     display: none;
     flex-direction: column;
@@ -198,7 +203,6 @@ nav a:visited {
     padding: 8px 0;
   }
   .top-bar.open .stuff-left,
-  .top-bar.open nav,
   .top-bar.open .stuff-right {
     display: flex;
   }
