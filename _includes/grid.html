@@ -13,9 +13,11 @@
         <img src="{{ item.image }}" alt="Missing image">
       {% endif %}
       <h3>{{ item.title }}</h3>
-      {% for tag in item.tags %}
-        <span class="tag" style="background-color: {{ site.post_tags[tag] }}">{{ tag }}</span>
-      {% endfor %}
+      <div class="tags">
+        {% for tag in item.tags %}
+          <span class="tag" style="background-color: {{ site.post_tags[tag] }}">{{ tag }}</span>
+        {% endfor %}
+      </div>
     </a>
   {% endfor %}
 </div>
