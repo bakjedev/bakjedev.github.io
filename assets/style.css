@@ -217,3 +217,13 @@ nav a:visited {
     grid-template-columns: 1fr;
   }
 }
+
+@media (min-width: 601px) {
+  .top-bar {
+    flex-direction: row;
+  }
+  .stuff-left { order: 1; }
+  nav { order: 2; flex: 1; text-align: center; }
+  .stuff-right { order: 3; }
+  .burger { display: none; }
+}
