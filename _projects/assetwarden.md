@@ -3,6 +3,7 @@ title: "Asset Warden"
 image: "assets/images/asset_warden/asset_warden_thumbnail.png"
 pinned: false
 priority: 4
+tags: [C++, Godot, Tools]
 ---
 
 ![thumbnail](../assets/images/asset_warden/asset_warden.png)

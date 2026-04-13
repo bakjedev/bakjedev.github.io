@@ -19,4 +19,10 @@ defaults:
 post_tags:
   C++: "#3d78c4"
   Vulkan: "#c43d4a"
-  Graphics: "#0b7154"
+  Graphics: "#ca5995"
+  Engine: "#0b7154"
+  Tools: "#6e1a37"
+  Team: "#ff7444"
+  Unreal: "#8100d1"
+  Godot: "#1a3263"
+  Gameplay: "#574964"

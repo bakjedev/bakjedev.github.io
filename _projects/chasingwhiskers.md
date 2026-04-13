@@ -3,6 +3,7 @@ title: Chasing Whiskers
 image: "assets/images/chasing_whiskers/chasing_whiskers_thumbnail.png"
 pinned: true
 priority: 2
+tags: [C++, Unreal, Gameplay, Team]
 ---
 
 ![thumbnail](../assets/images/chasing_whiskers/chasing_whiskers.png)

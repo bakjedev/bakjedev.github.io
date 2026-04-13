@@ -3,6 +3,7 @@ title: "Vulkan Renderer Replacement"
 image: "assets/images/from_gl_to_vk/sponzavulkan1_thumbnail.png"
 pinned: false
 priority: 3
+tags: [C++, Graphics, Vulkan]
 ---
 
 ![sponza vulkan image 1](/assets/images/from_gl_to_vk/sponzavulkan1.png)

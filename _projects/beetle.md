@@ -3,6 +3,7 @@ title: "Beetle: Custom Racing Game Engine"
 image: "assets/images/beetle/cars_thumbnail.png"
 pinned: true
 priority: 1
+tags: [C++, Engine, Tools, Team]
 ---
 
 ![cars](/assets/images/beetle/cars.png)
