@@ -111,7 +111,8 @@ nav a:hover {
 
 .post-card-related,
 .post-card {
-  display: block;
+  display: flex;
+  flex-direction: column;
   border: 1px solid #ddd;
   border-radius: 10px;
   overflow: hidden;
@@ -228,6 +229,7 @@ p:has(.more-link) {
 .tags {
   margin-left: 14px;
   margin-bottom: 10px;
+  margin-top: auto;
 }
 
 @media (max-width: 600px) {
