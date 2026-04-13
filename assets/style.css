@@ -178,7 +178,7 @@ nav a:visited {
   .top-bar {
     position: static;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: left;
     padding: 10px;
     gap: 0;
     border-bottom: none;
