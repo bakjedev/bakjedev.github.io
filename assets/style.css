@@ -166,17 +166,17 @@ nav a:hover {
 .more-link {
   font-weight: normal;
   text-decoration: none;
-  color: inherit;
+  color: #EEE;
   display: inline-block;
   text-align: center;
-  background-color: #e4e5f1;
+  background-color: #484b6a;
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 10px;
 }
 
 .more-link:hover {
-  background-color: #d2d3db;
+  background-color: #9394a5;
 }
 
 p:has(.more-link) {
@@ -184,7 +184,7 @@ p:has(.more-link) {
 }
 
 .more-link:visited {
-  color: inherit;
+  color: #EEE;
 }
 
 .project-details a,
