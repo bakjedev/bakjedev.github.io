@@ -194,9 +194,9 @@ nav a:visited {
     flex: 0 0 100%;
     display: none;
     flex-direction: column;
-    align-items: flex-start;  /* was: center */
+    align-items: flex-start;
     gap: 12px;
-    padding: 8px 0;
+    padding: 8px 0 8px 52px;
   }
   .top-bar.open .stuff-left,
   .top-bar.open .stuff-right {
