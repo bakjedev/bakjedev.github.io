@@ -89,8 +89,8 @@ nav a:hover {
   text-decoration: none;
 }
 
-#projects
-#posts
+#Projects,
+#Posts,
 #pinned-posts,
 #pinned-projects {
   text-align: center;
