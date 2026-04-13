@@ -5,7 +5,7 @@ image: "assets/images/gpu_driven/mixed_thumbnail.jpg"
 project: gpudriven
 pinned: true
 priority: 2
-tags: [Graphics, Vulkan]
+tags: [Graphics]
 ---
 
 ![thumbnail](../assets/images/gpu_driven/mixed.jpg)
