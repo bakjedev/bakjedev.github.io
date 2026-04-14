@@ -4,9 +4,16 @@ title: "Hi, I'm Quinten Bubberman!"
 noBack: true
 ---
 
-I'm a third-year **game programmer** at **Breda University of Applied Sciences**. I enjoy working close to the metal, focusing on **Graphics and Engine & Tools programming**. I love solving technical challenges, optimizing performance, and building systems that empower other developers and bring games to life.
+<div class="me-section">
+<div markdown="1">
+I'm a third-year **game programmer** at **Breda&nbsp;University of Applied Sciences**, focusing on **Graphics and Engine & Tools programming**.
 
-**I'm looking for an internship starting September 2026.**
+I love working close to the metal, building renderers, optimizing performance, and creating tools that empower other developers.
+
+**I'm looking for an internship starting September&nbsp;2026.**
+</div>
+<img src="assets/images/index/me.jpg" class="me-image">
+</div>
 
 ### What I work with
 
@@ -24,14 +31,11 @@ I'm a third-year **game programmer** at **Breda University of Applied Sciences**
 {% include grid.html collection="posts" pinned=true %}
 <a href="/pages" class="more-link">More Posts</a>
 
-## Me
+## Info
 
-<div class="me-section">
 <div class="project-details" markdown="1">
 - Email me at [**contact@bakje.dev**](mailto:contact@bakje.dev)
 - Connect with me on [**LinkedIn**](https://www.linkedin.com/in/quinten-bubberman/)
 - Take a look at my <a href="/assets/Resume-Quinten-Bubberman.pdf" target="_blank">**resume**</a>
 - Check out my projects on [**Github**](https://github.com/bakjedev) 
-</div>
-<img src="assets/images/index/me.jpg" class="me-image">
 </div>

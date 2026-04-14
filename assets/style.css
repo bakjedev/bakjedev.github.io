@@ -92,13 +92,19 @@ nav a:hover {
 
 .me-image {
   width: 200px;
-  border-radius: 10px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  align-self: flex-start;
+  outline: 3px solid #484b6a;
+  outline-offset: 3px;
 }
 
 .me-section {
   display: flex;
   align-items: flex-start;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 #Projects,
