@@ -98,7 +98,7 @@
       if (window.innerWidth <= 600) {
         if (lastScroll - current > 10 || current <= 0) {
           topBar.style.transform = 'translateY(0)';
-        } else if (current - lastScroll > 10) {
+        } else if (current > lastScroll) {
           topBar.style.transform = 'translateY(-100%)';
         }
       }
