@@ -28,13 +28,6 @@ I'm a third-year **game programmer** at **Breda University of Applied Sciences**
 
 <div class="me-section">
 <div class="project-details" markdown="1">
-
-I like games like: Counter-Strike, Minecraft, Valheim, Factorio.
-
-I also enjoy video editing.
-
-And I currently live in the Netherlands.
-
 - Email me at [contact@bakje.dev](mailto:contact@bakje.dev)
 - Connect with me on [LinkedIn](https://www.linkedin.com/in/quinten-bubberman/)
 - Take a look at my <a href="/assets/Resume-Quinten-Bubberman.pdf" target="_blank">resume</a>
