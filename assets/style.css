@@ -270,12 +270,13 @@ p:has(.more-link) {
     margin: auto;
   }
   .top-bar {
-    position: static;
-    margin-left: calc(-10px);
-    margin-right: calc(-10px);
-    margin-top: calc(-10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     padding: 10px;
     justify-content: space-between;
+    transition: transform 0.1s ease;
   }
   nav {
     text-align: left;

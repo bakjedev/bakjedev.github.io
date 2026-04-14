@@ -89,6 +89,21 @@
       overlay.classList.remove('open');
       burger.setAttribute('aria-expanded', false);
     });
+
+    let lastScroll = 0;
+    const topBar = document.querySelector('.top-bar');
+
+    window.addEventListener('scroll', () => {
+      const current = window.scrollY;
+      if (window.innerWidth <= 600) {
+        if (current < lastScroll) {
+          topBar.style.transform = 'translateY(0)';
+        } else {
+          topBar.style.transform = 'translateY(-100%)';
+        }
+      }
+      lastScroll = current;
+    });
   </script>
 </body>
 </html>
