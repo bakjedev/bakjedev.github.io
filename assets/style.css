@@ -353,6 +353,9 @@ p:has(.more-link) {
   .post-card img {
     height: 250px;
   }
+  .me-section {
+    flex-direction: column;
+  }
 }
 @media (min-width: 601px) {
   .top-bar {
