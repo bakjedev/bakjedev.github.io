@@ -20,6 +20,7 @@ body {
   align-items: center;
   z-index: 1000;
   border-bottom: 3px solid #9394a5;
+  transition: transform 0.1s ease;
 }
 
 h1,h2,h3 {

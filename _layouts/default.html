@@ -96,9 +96,9 @@
     window.addEventListener('scroll', () => {
       const current = window.scrollY;
       if (window.innerWidth <= 600) {
-        if (current < lastScroll || current <= 0) {
+        if (lastScroll - current > 10 || current <= 0) {
           topBar.style.transform = 'translateY(0)';
-        } else {
+        } else if (current - lastScroll > 10) {
           topBar.style.transform = 'translateY(-100%)';
         }
       }
