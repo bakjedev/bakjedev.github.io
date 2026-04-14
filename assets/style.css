@@ -201,7 +201,7 @@ p:has(.more-link) {
 
 .project-details a,
 .project-details a:visited {
-  color:inherit;
+  color:#484b6a;
 }
 
 .back-button {
