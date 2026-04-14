@@ -99,6 +99,7 @@ nav a:hover {
   align-self: flex-start;
   outline: 3px solid #484b6a;
   outline-offset: 3px;
+  margin-top: 2.0rem;
 }
 
 .me-section {
