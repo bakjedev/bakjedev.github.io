@@ -235,6 +235,25 @@ p:has(.more-link) {
   margin-top: auto;
 }
 
+@media (max-width: 1000px) {
+  .post-grid-related,
+  .post-grid {
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  
+  .post-card-related img,
+  .post-card img {
+    height: 250px;
+  }
+
+  .top-bar {
+    margin-left: -40px;
+    margin-right: -40px;
+  }
+}
+
 @media (max-width: 600px) {
   body {
     margin: auto;
@@ -332,3 +351,4 @@ p:has(.more-link) {
   .stuff-right { order: 3; }
   .burger { display: none; }
 }
+
