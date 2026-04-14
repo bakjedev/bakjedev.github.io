@@ -373,6 +373,7 @@ p:has(.more-link) {
 
   .me-image {
     order: -1;
+    margin-top: 0;
   }
 }
 @media (min-width: 601px) {
