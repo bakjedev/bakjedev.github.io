@@ -288,7 +288,8 @@ p:has(.more-link) {
     z-index: 2000;
     display: flex;
     flex-direction: column;
-    padding: 20px 30px;
+    padding: 20px 20px;
+    padding-right: 10px;
     gap: 24px;
     transition: right 0.1s ease;
     border: 3px solid #9394a5;
@@ -317,7 +318,7 @@ p:has(.more-link) {
     height: 3px;
     background: #EEE;
     position: absolute;
-    top: 50%;
+    top: 20%;
     left: 0;
   }
   .overlay-close span:first-child {
