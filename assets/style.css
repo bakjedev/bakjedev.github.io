@@ -91,6 +91,7 @@ nav a:hover {
 
 .me-image {
   width: 200px;
+  border-radius: 10px;
 }
 
 .me-section {
