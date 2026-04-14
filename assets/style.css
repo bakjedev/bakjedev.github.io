@@ -89,6 +89,11 @@ nav a:hover {
   text-decoration: none;
 }
 
+.me-image {
+  width: 200px;
+  height: 200px;
+}
+
 #Projects,
 #Posts,
 #pinned-posts,
