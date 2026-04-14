@@ -91,7 +91,12 @@ nav a:hover {
 
 .me-image {
   width: 200px;
-  height: 200px;
+}
+
+.me-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
 }
 
 #Projects,

@@ -26,11 +26,12 @@ I'm a third-year **game programmer** at **Breda University of Applied Sciences**
 
 ## Me
 
+<div class="me-section">
 <div class="project-details" markdown="1">
 - Email me at [contact@bakje.dev](mailto:contact@bakje.dev)
 - Connect with me on [LinkedIn](https://www.linkedin.com/in/quinten-bubberman/)
 - Take a look at my <a href="/assets/Resume-Quinten-Bubberman.pdf" target="_blank">resume</a>
 - Check out my projects on [Github](https://github.com/bakjedev) 
 </div>
-
 <img src="assets/images/index/me.jpg" class="me-image">
+</div>
