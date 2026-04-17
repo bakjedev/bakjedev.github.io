@@ -99,13 +99,81 @@ nav a:hover {
   align-self: flex-start;
   outline: 3px solid #484b6a;
   outline-offset: 3px;
-  margin-top: 2.0rem;
 }
 
 .me-section {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
+}
+
+.me-sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-shrink: 0;
+}
+
+.me-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 200px;
+}
+
+.me-buttons a {
+  background-color: #484b6a;
+  color: #EEE;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 0.9em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.me-buttons a:visited { color: #EEE; }
+.me-buttons a:hover { background-color: #5a5e82; color: #EEE; }
+
+.me-icons {
+  display: flex;
+  gap: 12px;
+  width: auto;
+}
+
+.me-icons a {
+  background: none;
+  padding: 6px;
+  width: auto;
+}
+
+.me-icons a:hover {
+  background: none;
+}
+
+.me-icons img {
+  width: 28px;
+  height: 28px;
+  display: block;
+  margin: 0;
+}
+
+.me-icons .icon {
+  display: block;
+  width: 28px;
+  height: 28px;
+  background-color: #484b6a;
+  -webkit-mask: var(--icon) no-repeat center / contain;
+  mask: var(--icon) no-repeat center / contain;
+}
+.me-icons a:hover .icon { background-color: #5a5e82; }
+
+.me-section h3 {
+  margin-top: 3.0rem;
 }
 
 #Projects,
@@ -385,8 +453,7 @@ p:has(.more-link) {
     flex-direction: column;
     align-items: center;
   }
-
-  .me-image {
+  .me-sidebar {
     order: -1;
     margin-top: 0;
   }
