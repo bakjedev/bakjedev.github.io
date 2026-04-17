@@ -172,10 +172,6 @@ nav a:hover {
 }
 .me-icons a:hover .icon { background-color: #5a5e82; }
 
-.me-section h3 {
-  margin-top: 3.0rem;
-}
-
 #Projects,
 #Posts,
 #pinned-posts,

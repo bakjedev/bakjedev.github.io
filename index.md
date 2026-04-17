@@ -11,15 +11,6 @@ I'm a third-year **game programmer** at **Breda&nbsp;University of Applied Scien
 I love working close to the metal, building renderers, optimizing performance, and creating tools that empower other developers.
 
 **I'm looking for an internship starting September&nbsp;2026.**
-
-### What I work with
-
-- **Primary Language:** C++
-- **Other Languages:** Python, Rust, GLSL
-- **Engines:** Unreal, Godot
-- **Tools:** Git, Perforce, Rider, Visual Studio, NSight Graphics, Tracy, Linux
-- **Natural Languages:** Dutch, English
-
 </div>
 <div class="me-sidebar">
 <img src="assets/images/index/me.jpg" class="me-image">
@@ -36,6 +27,14 @@ I love working close to the metal, building renderers, optimizing performance, a
 </div>
 </div>
 </div>
+
+### What I work with
+
+- **Primary Language:** C++
+- **Other Languages:** Python, Rust, GLSL
+- **Engines:** Unreal, Godot
+- **Tools:** Git, Perforce, Rider, Visual Studio, NSight Graphics, Tracy, Linux
+- **Natural Languages:** Dutch, English
 
 ## Pinned Projects 
 {% include grid.html collection="projects" pinned=true %}
