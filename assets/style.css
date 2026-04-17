@@ -254,6 +254,21 @@ p:has(.more-link) {
   margin-top: auto;
 }
 
+.youtube-video {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+}
+
+.youtube-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 @media (max-width: 1000px) {
   .post-grid-related,
   .post-grid {
