@@ -8,6 +8,8 @@ tags: [C++, Unreal, Gameplay, Team]
 
 ![thumbnail](../assets/images/chasing_whiskers/chasing_whiskers.png)
 
+<iframe src="https://store.steampowered.com/widget/4515430/" frameborder="0" width="700" height="190"></iframe>
+
 - **Team size:** 24
 - **Role:** Gameplay Programmer
 - **Duration:** 16 weeks
