@@ -19,6 +19,6 @@ For **block D** of my **first year** at **BUAS** I worked together with a team t
 
 </div>
 
-<iframe frameborder="0" src="https://itch.io/embed/2724632" width="552" height="167"><a href="https://buas.itch.io/team-salt">Dusty Mayhem by Breda University of Applied Sciences, bakje06, bean-28, dash-axe, denise-dk, desynkv, desytsv, funkyburitto, jamiejo1, luc-momber, nikolayderooij, pappaniels, pygorable, scholte</a></iframe>
+<iframe frameborder="0" src="https://itch.io/embed/2724632" width="100%" height="167"><a href="https://buas.itch.io/team-salt">Dusty Mayhem by Breda University of Applied Sciences, bakje06, bean-28, dash-axe, denise-dk, desynkv, desytsv, funkyburitto, jamiejo1, luc-momber, nikolayderooij, pappaniels, pygorable, scholte</a></iframe>
 
 ##### ...WIP...
