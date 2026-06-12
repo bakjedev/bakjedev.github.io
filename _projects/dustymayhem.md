@@ -2,7 +2,7 @@
 title: "Dusty Mayhem"
 image: "assets/images/dusty_mayhem/dusty_mayhem_thumbnail.png"
 pinned: false
-priority: 7
+priority: 8
 tags: [Unreal, Gameplay, Team]
 ---
 

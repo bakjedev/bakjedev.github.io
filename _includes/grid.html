@@ -10,7 +10,9 @@
     {% endif %}
     <a href="{{ item.url }}" class="post-card">
       {% if item.image %}
-        <img src="{{ item.image }}" alt="Missing image">
+        <img src="{{ item.image }}" alt="Thumbnail image">
+      {% else %}
+        <img src="assets/images/missing.webp" alt="Missing image">
       {% endif %}
       <h3>{{ item.title }}</h3>
       <div class="tags">

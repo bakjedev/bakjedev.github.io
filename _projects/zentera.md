@@ -2,7 +2,7 @@
 title: "Zentera"
 image: "assets/images/zentera/zentera_thumbnail.png"
 pinned: false
-priority: 5
+priority: 6
 tags: [Gameplay, Team]
 ---
 

@@ -2,7 +2,7 @@
 title: "Pitfall 3D"
 image: "assets/images/pitfall3d/pitfall3d.gif"
 pinned: false
-priority: 9
+priority: 10
 tags: [C++, Engine, Gameplay]
 ---
 

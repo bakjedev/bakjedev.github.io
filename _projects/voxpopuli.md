@@ -2,7 +2,7 @@
 title: "CPU Raytracer"
 image: "assets/images/voxpopuli/voxpopuli_thumbnail.png"
 pinned: false
-priority: 8
+priority: 9
 tags: [C++, Graphics, Engine]
 ---
 
