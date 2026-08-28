@@ -6,11 +6,11 @@ noBack: true
 
 <div class="me-section">
 <div markdown="1">
-I'm a third-year **game programmer** at **Breda&nbsp;University of Applied Sciences**, focusing on **Graphics and Engine & Tools programming**.
+I'm a fourth-year **game programmer** at **Breda&nbsp;University of Applied Sciences**, focusing on **Graphics and Engine & Tools programming**.
 
 I love working close to the metal, building renderers, optimizing performance, and creating tools that empower other developers.
 
-**I'm looking for an internship starting September&nbsp;2026.**
+**I'm looking for an internship starting in the&nbsp; second half of the 2026-2027 academic year.**
 </div>
 <div class="me-sidebar">
 <img src="assets/images/index/me.jpg" class="me-image">
