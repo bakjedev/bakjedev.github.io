@@ -170,8 +170,8 @@ After:
 ### Conclusion
 The visibility buffer is not strictly better than classic deferred. Pass 1 is cheap, but pass 2 is doing significantly more work per pixel than reading from a G-buffer (matrix multiplications, index buffer fetches, manual barycentric interpolation). However, the visibility buffer takes the deferred's decoupling of geometry and shading even further. This is really helpful in cases of dense geometry and overdraw, where fragments are wasted, because now it only needs to write the ID instead of having to evaluate the material.
 
-In my renderer there isn't any expensive shading (yet), and most triangles are quite big so the gains are little. 
-
 Transparency is still hard. The visibility buffer only stores one triangle per pixel, so transparent materials need a separate forward pass on top. MSAA is cheaper than with deferred. Multisampling a single uint32 render target costs a fraction of multisampling a full G-buffer. The shading pass does have to resolve per sample rather than per pixel, but the memory savings outweigh the negatives.
+
+In my renderer there isn't any expensive shading (yet), and most triangles are quite big, so the gains are little. 
 
 When dealing with dense and/or heavily overlapping geometry, it is the right tradeoff.
