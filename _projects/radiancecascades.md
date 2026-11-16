@@ -21,13 +21,14 @@ Real-time 2D **global illumination** in **C++** and **Vulkan** using **radiance 
 emissive materials and the lighting is updated every frame with nice soft shadows: ~6ms on an RTX 3070 at
 1024×1024, ~88M ray intervals per frame across 6 cascades.
 
-- [**Jump flood signed distance field**](): calculates the nearest solid and empty pixel for every pixel, giving signed distances. Used for ray marching, skipping probes inside solids, and the falloff for lighting interiors of solids
-- [**Bilinear-fix merging**](): every ray traces to the interval start of each of the 4 neighbouring probes in the next cascade, so the rays stay continuous when merged instead of skipping areas, (mostly) removing ringing artifacts at cascade boundaries
-- [**Morton-layout directions**](): a ray's 4 child directions live in a 2×2 texel block. A single hardware bilinear sample can then average them. Resulting in only 4 texture fetches per texel instead of 16, ~2ms saved
+- **Jump flood signed distance field**: calculates the nearest solid and empty pixel for every pixel, giving signed distances. Used for ray marching, skipping probes inside solids, and the falloff for lighting interiors of solids
+- [**Bilinear-fix merging**](../pages/bilinear): every ray traces to the interval start of each of the 4 neighbouring probes in the next cascade, so the rays stay continuous when merged instead of skipping areas, (mostly) removing ringing artifacts at cascade boundaries
+- [**Morton-layout directions**](../pages/bilinear): a ray's 4 child directions live in a 2×2 texel block. A single hardware bilinear sample can then average them. Resulting in only 4 texture fetches per texel instead of 16, ~2ms saved
+- [**Profiled using Nsight**](../pages/gpuprofiling): 16x8 workgroups and memory reads moved out of the trace loop.
 
 Shaders written in **Slang**.
 
-The frame runs through [**framework**](), a **Vulkan render graph** library I built in block D of my third year at BUAS: declare passes and the resources they read and write, and the graph figures out the execution order and inserts the correct synchronization. This project was its first real workload, and it necessitated a couple additions: per-mip/per-layer image state tracking (the JFA pass ping pongs between two layers of the same image), per-pass GPU timestamps (for the timing graph), and debug labels for RenderDoc and Nsight.
+The frame runs through [**framework**](../pages/framework), a **Vulkan render graph** library I built in block D of my third year at BUAS: declare passes and the resources they read and write, and the graph figures out the execution order and inserts the correct synchronization. This project was its first real workload, and it necessitated a couple additions: per-mip/per-layer image state tracking (the JFA pass ping pongs between two layers of the same image), per-pass GPU timestamps (for the timing graph), and debug labels for RenderDoc and Nsight.
 
 **Self study** project for **block A** of my fourth year at **BUAS**. For block B I will be extending this into 3D.
 
