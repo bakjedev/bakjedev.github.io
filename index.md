@@ -31,7 +31,7 @@ I love working close to the metal, building renderers, optimizing performance, a
 ### What I work with
 
 - **Primary Language:** C++
-- **Other Languages:** Python, Rust, GLSL
+- **Other Languages:** Python, Rust, GLSL, Slang
 - **Engines:** Custom, Unreal, Godot
 - **Tools:** Git, Perforce, Rider, Visual Studio, NSight Graphics, Tracy, Linux
 - **Natural Languages:** Dutch, English
