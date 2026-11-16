@@ -10,7 +10,7 @@ I'm a fourth-year **game programmer** at **Breda&nbsp;University of Applied Scie
 
 I love working close to the metal, building renderers, optimizing performance, and creating tools that empower other developers.
 
-**I'm looking for an internship from Feb-Jul 2027,&nbsp;open to relocation within the EU.**
+**I'm looking for an internship from Feb-Jul&nbsp;2027, open to relocation within the EU.**
 </div>
 <div class="me-sidebar">
 <img src="assets/images/index/me.jpg" class="me-image">
