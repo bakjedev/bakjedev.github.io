@@ -19,6 +19,6 @@ For **block A** of my **third year** at **BUAS** I built an **extension** in **C
 
 </div>
 
-[![asset-warden-godot](https://gh-card.dev/repos/bakjedev/asset-warden-godot.svg)](https://github.com/bakjedev/asset-warden-godot)
+[![asset-warden-godot github](https://github-stats-extended.vercel.app/api/pin?username=bakjedev&repo=bakjedev%2Fasset-warden-godot&theme=light_github_repocard)](https://github.com/bakjedev/asset-warden-godot)
 
 ##### ...WIP...

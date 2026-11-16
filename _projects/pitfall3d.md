@@ -26,6 +26,6 @@ For **block B** of my **first year** at **BUAS** I created a **3D** platformer g
 
 ## Github repository
 
-[![procrastinate](https://gh-card.dev/repos/bakjedev/pitfall3d.svg)](https://github.com/bakjedev/pitfall3d)
+[![pitfall3d github](https://github-stats-extended.vercel.app/api/pin?username=bakjedev&repo=bakjedev%2Fpitfall3d&theme=light_github_repocard)](https://github.com/bakjedev/pitfall3d)
 
 ##### ...WIP...

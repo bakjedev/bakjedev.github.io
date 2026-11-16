@@ -41,4 +41,4 @@ For the last **2 weeks** I had to use this engine to create a small **puzzle gam
 
 ## Github repository
 
-[![procrastinate](https://gh-card.dev/repos/bakjedev/voxpopuli.svg)](https://github.com/bakjedev/voxpopuli)
+[![voxpopuli github](https://github-stats-extended.vercel.app/api/pin?username=bakjedev&repo=bakjedev%2Fvoxpopuli&theme=light_github_repocard)](https://github.com/bakjedev/voxpopuli)

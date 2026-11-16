@@ -33,4 +33,4 @@ Built a **Vulkan** renderer in **C++** from scratch, starting from a basic trian
 
 ## Github repository
 
-[![procrastinate](https://gh-card.dev/repos/bakjedev/procrastinate.svg)](https://github.com/bakjedev/procrastinate)
+[![procrastinate github](https://github-stats-extended.vercel.app/api/pin?username=bakjedev&repo=bakjedev%2Fprocrastinate&theme=light_github_repocard)](https://github.com/bakjedev/procrastinate)
