@@ -49,7 +49,7 @@ for (int i = 0; i < 4; i++) {
 All this makes it so that the rays become continuous and will have less errors, leading to less artifacts. Obviously, this comes at a cost: 4x the amount of rays, which means 4x the amount of texture samples. You will be doing 16 texture samples per pixel per cascades pass (except the last cascade as there is nothing to merge with). This post is about getting that down to **4**.
 
 ### Bilinear sampling
-Probes are stored as tiles in a texture, each texel in the tile is a direction. They are stored in row-major, so `dir_index = interval.y * probe_size + interval.x`. This places the 4 child intervals of a neighbour in a 1x4 strip. You might already be thinking: we can bilinearly sample here! A bilinear sample covers a 2x2 of texels, so our strip needs just 2 samples, which would bring it to 8 samples in total. This is already quite an improvement as the GPU handles the bilinear math for free in dedicated hardware.
+Probes are stored as tiles in a texture, each texel in the tile is a direction. They are stored in row-major, so `dir_index = interval.y * probe_size + interval.x`. This places the 4 child intervals of a neighbour in a 1x4 strip. You might already be thinking: we can bilinearly sample here! A bilinear sample covers a 2x2 of texels, so our strip needs just 2 samples, which would bring it to 8 samples in total. This is already quite an improvement as the GPU handles the bilinear math for free in dedicated hardware. But we can do better...
 
 ![4x1](../assets/images/radiance_cascades/4x1.jpg)
 
@@ -62,7 +62,6 @@ It numbers each tile by splitting it into 4 quadrants:
 <br>
 `2 3`
 <br>
-
 Then it splits those quadrants into 4 again, the same way, again and again until the pieces are single texels. To compute this numbering, we need to know which quadrant the texel is in for each split. Each split needs to answer 2 questions: is it in the right half, and is it in the bottom half?
 
 The answers to these questions are written in the texel's x and y in binary. Take an 8 wide tile, x will go from 0 to 7, which takes 3 bits, worth 1, 2, and 4 respectively. So if the third bit is set it is 4 or more, meaning its on the right half. Then if the second bit is set its `4+2=6` or more, meaning its on the right half of that right half. And then finally if the first bit is set then its `4+2+1=7`, meaning its the most right piece. The bits for y will answer it in the same way for the vertical halves. 
