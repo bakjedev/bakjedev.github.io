@@ -12,7 +12,7 @@ tags: [C++, Graphics, Vulkan]
 
 - **Solo**
 - **Role:** Graphics Programmer
-- **Duration:** 8 weeks
+- **Duration:** 9 weeks
 {:.project-table}
 
 <div class="project-details" markdown="1">
