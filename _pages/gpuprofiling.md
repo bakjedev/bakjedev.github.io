@@ -3,8 +3,8 @@ title: "GPU Profiling: what?"
 datePosted: Nov 2026
 image: "assets/images/radiance_cascades/profiling_thumbnail.png"
 project: rc2d
-pinned: false
-priority: 5
+pinned: true
+priority: 2
 tags: [Graphics]
 ---
 

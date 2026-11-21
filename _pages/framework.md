@@ -4,7 +4,7 @@ datePosted: Nov 2026
 image: "assets/images/framework/thumbnail.png"
 project: rc2d
 pinned: false
-priority: 6
+priority: 8
 tags: [Vulkan, Tools]
 ---
 

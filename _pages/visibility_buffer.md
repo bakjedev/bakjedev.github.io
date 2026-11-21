@@ -4,7 +4,7 @@ datePosted: Apr 2026
 image: "assets/images/gpu_driven/mixed_thumbnail.jpg"
 project: gpudriven
 pinned: true
-priority: 2
+priority: 0
 tags: [Graphics]
 ---
 
